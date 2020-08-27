@@ -1,0 +1,51 @@
+.section-boxed-info {
+	.box-orcamento {
+		.title {
+			.raleway-black();
+			font-size: 57px;
+			color: #333333;
+			margin: 50px 0 20px;
+			text-align: center;
+
+			@media @tablet-680 {
+				font-size: 37px;
+			}
+			@media @celular-480 {
+				font-size: 30px;
+			}
+		}
+		p {
+			.raleway-bold();
+			font-size: 23px;
+			color: #333333;
+			text-align: center;
+
+			@media @tablet-680 {
+				font-size: 18px;
+			}
+		}
+		.btn-orcamento {
+			display: block;
+			text-align: center;
+			margin-top: 30px;
+			margin-bottom: 50px;
+
+			a {
+				display: inline-block;
+				background: #f00;
+				color: #fff;
+				text-decoration: none;
+				.raleway-bold();
+				font-size: 17px;
+				padding: 17px 5px;
+				width: 279px;
+				text-align: center;
+
+				&:hover,
+				&:focus {
+					background: #000;
+				}
+			}
+		}
+	}
+}

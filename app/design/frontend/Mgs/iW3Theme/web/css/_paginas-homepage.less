@@ -1,0 +1,547 @@
+// SLIDER
+.section-full-banner { 
+	.box-banner {
+		padding: 0;
+
+		// Indicadores (Setas)
+		.owl-nav {
+			> div {
+				border: 0  !important;
+				background: transparent !important;
+				
+				.fa-arrow-left {
+					&:before {
+						.reset-img();
+						.icon-seta-esquerda();
+					}
+				}
+				.fa-arrow-right {
+					&:before {
+						.reset-img();
+						.icon-seta-direita();
+					}
+				}
+			}
+		}
+	}
+
+	// Cenas (Bolinhas)
+	.owl-dots {
+		.owl-dot {
+			span {					
+				background: #FFF;
+				height: 16px;
+				width: 16px;
+				margin: 0 5px;
+			}
+
+			&.active {
+				span {
+					background-color: #f03c32;
+					border-color: #FFF;
+					height: 20px;
+					width: 20px;
+				}
+			}
+		}
+	}
+}
+
+
+// Faixa Infos
+.box-infos-destaque {
+	background: #ecf0f1;
+	margin: 0 0 50px;
+
+	.group-itens {
+		.center-elements();
+
+		@media @celular-590 {
+			display: block;
+		}
+
+		.item {
+			padding: 12px 39px;
+
+			&:not(:last-child) {
+				border-right: 1px solid #cdcd;
+			}
+
+			@media @desktop-1199 {
+				padding: 12px 14px;
+			}
+
+			@media @tablet-991 {
+				padding: 12px 30px;
+			}
+
+			@media @tablet-767 {
+				padding: 12px 15px;
+			}
+
+			@media @celular-590 {
+				float: left; 
+				width: 50%;
+				border-right: 0 !important;
+			}
+
+			@media @celular-420 {
+				width: 100%;
+				clear: both;
+				text-align: center;
+				padding: 0;
+				padding-top: 12px;
+				padding-bottom: 12px;
+			}
+
+			img {
+				display: inline-block;
+
+				@media @tablet-991 {
+					display: block;
+					margin: 0 auto;
+				}
+
+				@media @celular-420 {
+					display: inline-block;
+				}
+			}
+			p {
+				display: inline-block;
+				.fonte2();
+				margin: 0;
+
+				@media @tablet-991 {
+					display: block;
+					text-align: center;
+				}
+
+				@media @celular-420 {
+					display: inline-block;
+					text-align: left;
+					font-size: 13px;
+				}
+
+				span {
+					font-weight: bold;
+				}
+			}
+		}
+	}
+}
+
+
+// EXIBICAO DE PRODUTOS
+.section-boxed-products {
+	.panel-block-row {		
+		margin: 0 0 80px;
+	}
+
+	.box-products-promotion {
+		// Titulo
+		.content-heading {
+			.title {
+				width: 200px;
+				margin-left: -100px;
+			}
+		}
+	}
+
+	.box-products-news,
+	.box-products-featured {
+		// Titulo
+		.content-heading {
+			.title {
+				width: 300px;
+				margin-left: -150px;
+			}
+		}
+	}
+
+	.content-block {
+
+		// Titulo
+		.content-heading {
+			.title {
+				.fonte1();
+				.size-titulo1();
+				color: @cor-destaque-1;
+				background: #fff;
+				left: 50%;
+			}
+
+			&:before {
+				background: #d42b22;
+			}
+		}
+
+		// Produtos
+		.products-grid {
+			.owl-carousel {
+				// Indicadores (Setas)
+				.owl-nav {
+					> div {
+						border: 0  !important;
+						background: transparent !important;
+
+
+						
+						&.owl-prev {
+							left: 0;
+							.fa-arrow-left {
+								&:before {
+									.reset-img();
+									.icon-seta-esquerda();
+									height: 55px;
+									background-color: @cor-destaque-3;
+								}
+							}
+
+							&:hover {
+								&:before {
+									background-color: @cor-destaque-3-2;
+								}
+							}
+						}
+
+						&.owl-next {
+							right: 2px;
+							.fa-arrow-right {
+								&:before {
+									.reset-img();
+									.icon-seta-direita();
+									height: 55px;
+									background-color: @cor-destaque-3;
+									position: relative;
+									left: 2px;
+								}
+
+								&:hover {
+									&:before {
+										background-color: @cor-destaque-3-2;
+									}
+								}
+							}
+						}
+
+					}
+				}
+
+				// Itens
+				.owl-item {
+					padding: 0;
+				}
+			}
+		}
+	}
+}
+
+
+// PROMOCAO
+.section-boxed-products {
+
+	// Banner
+	.box-slider-promotion {
+		padding-right: 1px;
+		padding-top: 22px;
+
+		@media @desktop-1199 {
+			padding-top: 66px;
+		}
+		
+		@media @tablet-991 {
+			display: none;
+		}
+	}
+}
+
+
+// INSTAGRAM
+.section-full-socials {
+	.box-instagram-title {
+		.center-elements();
+		padding: 30px 0 10px;
+
+		@media @celular-620 {
+			display: block;
+			float: left;
+			clear: both;
+			width: 100%;
+			padding: 20px 15px;			
+		}
+
+		.insta-logo {
+			float: left;
+
+			@media @celular-620 {
+				width: 100%;
+				text-align: center;			
+			}
+		}
+
+		.insta-siga {			
+			float: left;
+			border-left: 2px solid #FFF;
+			padding-left: 30px;
+			margin-left: 30px;
+
+			@media @celular-620 {
+				width: 100%;
+				text-align: center;
+				margin: 0;
+				padding: 0;
+				border-left: 0;
+			}
+
+			p {
+				font-style: italic;
+				color: #FFF;
+			}
+		}
+	}
+
+	.box-instagram {
+		.block-content {
+			.row {
+				> li {
+					background: #FFF;
+					border: 2px solid #292929;
+					padding: 5px;
+
+					.instagram-item {
+						margin-bottom: 0;		
+						overflow: hidden;
+						height: 100%;
+
+						img {								
+							max-height: 100%;
+						}
+
+						@media @tablet-991 {
+							max-height: 250px;
+							min-height: 250px;
+						}
+
+						@media @celular-420 {
+							max-height: 180px;
+							min-height: 180px;
+						}
+
+						@media @celular-320 {
+							max-height: 150px;
+							min-height: 150px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+// NEWSLETTER
+.section-full-newsletter {
+	.box-newsletter {
+		.clear-elements();
+		.center-elements();
+		padding: 90px 15px;
+
+		@media @tablet-991 {
+			display: block;
+			padding: 45px 15px;
+		}
+
+		// Texto Apoio
+		.newsletter-titulo {    	
+			float: left;
+
+			@media @tablet-991  {
+				width: 100%;
+				text-align: center;
+				margin: 0 0 30px;
+			}
+
+			img {
+				float: left;
+
+				@media @tablet-991 {
+					display: inline-block;
+					float: none;
+					margin: -25px 0 0;					
+				}
+			}
+			p {
+				float: left;
+				.fonte3();
+				color: #FFF;
+				text-align: left;
+				font-size: 21px;
+				line-height: 23px;
+				margin: 2px 20px 0;
+
+				@media @tablet-991 {
+					float: none;
+					display: inline-block;					
+				}
+
+				.destaque {    	
+					display: block;
+					text-transform: uppercase;
+					font-size: 23px;
+				}
+			}
+		}
+
+		// Input
+		.newsletter-form {
+			float: left;
+			width: 100%;
+			max-width: 532px;
+
+			@media @tablet-991 {
+				max-width: 100%;
+
+				.form {
+					.center-elements();
+				}
+			}
+
+			.form-group.newsletter {
+				float: left;
+				width: 100%;
+				max-width: 370px;
+				margin: 0 20px 0 0;
+
+				input {
+					border-radius: 50px;
+					background: transparent;
+					color: #FFF;
+					.fonte4();
+					font-style: italic;
+					font-size: 15px;
+					height: 41px;
+				}
+			}
+
+			// Btn Increver
+			.actions {
+				float: left;
+
+				.subscribe {
+					padding: 9px 36px;
+					border-radius: 50px;
+					background: @cor-destaque-1-2;
+					border: 1px solid @cor-destaque-1-2;
+					color: #FFF;
+					font-size: 15px;
+					.fonte4();
+					font-style: italic;
+					text-transform: none;
+					text-align: center;
+
+					&:hover {
+						background: @cor-destaque-1;
+						border-color: @cor-destaque-1;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+// INFOS DA LOJA
+.section-full-newsletter {
+	.box-information {
+		float: left;
+		width: 100%;
+		clear: both;
+		background: rgba(162,217,114,0.54);
+		padding: 25px;
+
+		.item {
+			float: left;
+			width: 25%;
+
+			@media @desktop-1309-992,
+			@tablet-740 {
+				text-align: center;
+				padding: 0 15px;
+			}
+
+			@media @tablet-991 {
+				width: 50%;
+				padding: 15px;
+			}
+
+			@media @celular-380 {
+				width: 100%;
+			}
+
+			img {
+				float: left;
+				margin: 8px 10px 0 0;
+
+				@media @desktop-1309-992,
+				@tablet-740 {
+					float: none;
+					margin: 0;
+					margin-bottom: 10px;
+				}
+			}
+
+			.texto {
+				float: left;
+				.fonte4();
+				color: #FFF;
+				margin: 0;
+				max-width: 260px;
+				line-height: 18px;
+
+				@media @desktop-1309-992,
+				@tablet-740 {
+					max-width: 100%;
+				}
+
+				@media @tablet-625 {
+					height: 96px;
+				}
+
+				@media @celular-480 {
+					height: 115px;
+				}
+
+				@media @celular-380 {
+					height: auto;
+				}
+
+				.destaque {					
+					display: block;
+					.fonte2();
+					text-transform: uppercase;
+					font-size: 18px;
+					margin: 0 0 6px;
+
+					@media @tablet-625 {
+						height: 36px;
+					}
+
+					@media @celular-445 {
+						font-size: 16px;
+						height: 54px;
+					}
+
+					@media @celular-380 {
+						font-size: 18px;
+						height: auto;
+					}
+				}
+			}
+		}
+	}
+}
+.instagram-item {
+	img.img-responsive {
+		max-height: 167px;
+	}
+}

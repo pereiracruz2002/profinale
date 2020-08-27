@@ -1,0 +1,1657 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: BUG-EMAIL-ADDR <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2015-08-18 09:59+0300\n"
+"PO-Revision-Date: 2015-08-18 10:04+0300\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 1.8.4\n"
+"Last-Translator: \n"
+"Language: ru\n"
+
+#: 404.php:6
+msgid "404. That&#8217;s an error."
+msgstr ""
+
+#: 404.php:7
+msgid "The requirest URL was not found on this server."
+msgstr ""
+
+#: 404.php:8
+msgid "That&#8217;s all we know."
+msgstr ""
+
+#: 404.php:9
+msgid "Home Page"
+msgstr ""
+
+#: archive.php:17
+msgid "All posts in "
+msgstr ""
+
+#: archive.php:20
+#, php-format
+msgid "All posts tagged %s"
+msgstr ""
+
+#: archive.php:23 archive.php:26 archive.php:29
+msgid "Archive for "
+msgstr ""
+
+#: archive.php:32
+msgid "All posts by "
+msgstr ""
+
+#: archive.php:35
+#, php-format
+msgid "All items in %s"
+msgstr ""
+
+#: archive.php:37
+#, php-format
+msgid "All posts in %s"
+msgstr ""
+
+#: page.php:74 single-post.php:47
+#: includes/templates/archive/archive-loop.php:71
+#: includes/templates/blog/blog-loop.php:112
+#: includes/templates/category/category-loop.php:75
+msgid "Sorry, no posts found."
+msgstr ""
+
+#: search.php:9
+msgid "Search results for"
+msgstr ""
+
+#: searchform.php:3 includes/templates/header/search-dropdown.php:6
+#: includes/templates/header/search-left.php:3
+#: includes/templates/header/search-right.php:6
+msgid "Search..."
+msgstr ""
+
+#: admin/theme-init.php:29
+msgid "Header Menu"
+msgstr ""
+
+#: admin/theme-init.php:112 admin/classes/class-tgm-plugin-activation.php:161
+msgid "Install Required Plugins"
+msgstr ""
+
+#: admin/theme-init.php:113 admin/classes/class-tgm-plugin-activation.php:162
+msgid "Install Plugins"
+msgstr ""
+
+#: admin/theme-init.php:114 admin/classes/class-tgm-plugin-activation.php:163
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: admin/theme-init.php:115
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: admin/theme-init.php:116 admin/classes/class-tgm-plugin-activation.php:165
+#, php-format
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: admin/theme-init.php:117 admin/classes/class-tgm-plugin-activation.php:166
+#, php-format
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: admin/theme-init.php:118 admin/classes/class-tgm-plugin-activation.php:167
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to install the %s plugin. "
+"Contact the administrator of this site for help on getting the plugin "
+"installed."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to install the %s "
+"plugins. Contact the administrator of this site for help on getting the "
+"plugins installed."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: admin/theme-init.php:119 admin/classes/class-tgm-plugin-activation.php:168
+#, php-format
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: admin/theme-init.php:120 admin/classes/class-tgm-plugin-activation.php:169
+#, php-format
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: admin/theme-init.php:121 admin/classes/class-tgm-plugin-activation.php:170
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to activate the %s "
+"plugin. Contact the administrator of this site for help on getting the "
+"plugin activated."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to activate the %s "
+"plugins. Contact the administrator of this site for help on getting the "
+"plugins activated."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: admin/theme-init.php:122 admin/classes/class-tgm-plugin-activation.php:171
+#, php-format
+msgid ""
+"The following plugin needs to be updated to its latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgid_plural ""
+"The following plugins need to be updated to their latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: admin/theme-init.php:123 admin/classes/class-tgm-plugin-activation.php:172
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to update the %s plugin. "
+"Contact the administrator of this site for help on getting the plugin "
+"updated."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to update the %s plugins. "
+"Contact the administrator of this site for help on getting the plugins "
+"updated."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: admin/theme-init.php:124 admin/classes/class-tgm-plugin-activation.php:173
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: admin/theme-init.php:125
+msgid "Activate installed plugin"
+msgid_plural "Activate installed plugins"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: admin/theme-init.php:126 admin/classes/class-tgm-plugin-activation.php:175
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: admin/theme-init.php:127 admin/classes/class-tgm-plugin-activation.php:177
+#: admin/classes/class-tgm-plugin-activation.php:1952
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: admin/theme-init.php:128
+#, php-format
+msgid "All plugins installed and activated successfully. %s"
+msgstr ""
+
+#: admin/theme-init.php:229
+msgid "Blog Sidebar 1"
+msgstr ""
+
+#: admin/theme-init.php:237
+msgid "Blog Sidebar 2"
+msgstr ""
+
+#: admin/theme-init.php:245
+msgid "Blog Sidebar 3"
+msgstr ""
+
+#: admin/theme-init.php:253
+msgid "Post Sidebar 1"
+msgstr ""
+
+#: admin/theme-init.php:261
+msgid "Post Sidebar 2"
+msgstr ""
+
+#: admin/theme-init.php:269
+msgid "Post Sidebar 3"
+msgstr ""
+
+#: admin/theme-init.php:277
+msgid "Footer Widgets 1"
+msgstr ""
+
+#: admin/theme-init.php:285
+msgid "Footer Widgets 2"
+msgstr ""
+
+#: admin/theme-init.php:293
+msgid "Footer Widgets 3"
+msgstr ""
+
+#: admin/theme-init.php:320
+msgid "j/m/Y"
+msgstr ""
+
+#: admin/theme-init.php:323
+msgid "Reply"
+msgstr ""
+
+#: admin/theme-init.php:340
+msgid "Anonymous"
+msgstr ""
+
+#: admin/theme-init.php:349
+msgid "Reply to "
+msgstr ""
+
+#: admin/theme-init.php:373
+msgid "Name"
+msgstr ""
+
+#: admin/theme-init.php:376
+msgid "Email"
+msgstr ""
+
+#: admin/theme-init.php:380
+msgid "Website"
+msgstr ""
+
+#: admin/theme-init.php:394
+msgctxt "noun"
+msgid "Comment"
+msgstr ""
+
+#: admin/theme-init.php:402
+msgid "Submit"
+msgstr ""
+
+#: admin/classes/class-tgm-plugin-activation.php:164
+msgid "Something went wrong."
+msgstr ""
+
+#: admin/classes/class-tgm-plugin-activation.php:174
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: admin/classes/class-tgm-plugin-activation.php:176
+msgid "Return to the dashboard"
+msgstr ""
+
+#: admin/classes/class-tgm-plugin-activation.php:178
+#: admin/classes/class-tgm-plugin-activation.php:1643
+msgid "The following plugin was activated successfully:"
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: admin/classes/class-tgm-plugin-activation.php:179
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: admin/classes/class-tgm-plugin-activation.php:180
+msgid "Dismiss this notice"
+msgstr ""
+
+#: admin/classes/class-tgm-plugin-activation.php:536
+#: admin/classes/class-tgm-plugin-activation.php:2169
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: admin/classes/class-tgm-plugin-activation.php:1171
+msgid "Private Repository"
+msgstr ""
+
+#: admin/classes/class-tgm-plugin-activation.php:1174
+msgid "Pre-Packaged"
+msgstr ""
+
+#: admin/classes/class-tgm-plugin-activation.php:1179
+msgid "WordPress Repository"
+msgstr ""
+
+#: admin/classes/class-tgm-plugin-activation.php:1182
+msgid "Required"
+msgstr ""
+
+#: admin/classes/class-tgm-plugin-activation.php:1182
+msgid "Recommended"
+msgstr ""
+
+#: admin/classes/class-tgm-plugin-activation.php:1185
+msgid "Not Installed"
+msgstr ""
+
+#: admin/classes/class-tgm-plugin-activation.php:1187
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: admin/classes/class-tgm-plugin-activation.php:1292
+#: admin/classes/class-tgm-plugin-activation.php:1405
+msgid "Install"
+msgstr ""
+
+#: admin/classes/class-tgm-plugin-activation.php:1316
+#: admin/classes/class-tgm-plugin-activation.php:1406
+msgid "Activate"
+msgstr ""
+
+#: admin/classes/class-tgm-plugin-activation.php:1368
+#, php-format
+msgid ""
+"No plugins to install or activate. <a href=\"%1$s\" title=\"Return to the "
+"Dashboard\">Return to the Dashboard</a>"
+msgstr ""
+
+#: admin/classes/class-tgm-plugin-activation.php:1384
+msgid "Plugin"
+msgstr ""
+
+#: admin/classes/class-tgm-plugin-activation.php:1385
+msgid "Source"
+msgstr ""
+
+#: admin/classes/class-tgm-plugin-activation.php:1386
+#: admin/customizer/theme-customize-controls.php:955
+msgid "Type"
+msgstr ""
+
+#: admin/classes/class-tgm-plugin-activation.php:1387
+msgid "Status"
+msgstr ""
+
+#: admin/classes/class-tgm-plugin-activation.php:1935
+msgid "Install package not available."
+msgstr ""
+
+#: admin/classes/class-tgm-plugin-activation.php:1936
+#, php-format
+msgid "Downloading install package from <span class=\"code\">%s</span>&#8230;"
+msgstr ""
+
+#: admin/classes/class-tgm-plugin-activation.php:1937
+msgid "Unpacking the package&#8230;"
+msgstr ""
+
+#: admin/classes/class-tgm-plugin-activation.php:1938
+msgid "Installing the plugin&#8230;"
+msgstr ""
+
+#: admin/classes/class-tgm-plugin-activation.php:1939
+msgid "Plugin install failed."
+msgstr ""
+
+#: admin/classes/class-tgm-plugin-activation.php:1940
+msgid "Plugin installed successfully."
+msgstr ""
+
+#: admin/classes/class-tgm-plugin-activation.php:1951
+msgid "Plugin activation failed."
+msgstr ""
+
+#: admin/classes/class-tgm-plugin-activation.php:2065
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#: admin/classes/class-tgm-plugin-activation.php:2066
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: admin/classes/class-tgm-plugin-activation.php:2066
+#: admin/classes/class-tgm-plugin-activation.php:2075
+msgid "Show Details"
+msgstr ""
+
+#: admin/classes/class-tgm-plugin-activation.php:2066
+#: admin/classes/class-tgm-plugin-activation.php:2075
+msgid "Hide Details"
+msgstr ""
+
+#: admin/classes/class-tgm-plugin-activation.php:2067
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: admin/classes/class-tgm-plugin-activation.php:2068
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: admin/classes/class-tgm-plugin-activation.php:2072
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#: admin/classes/class-tgm-plugin-activation.php:2073
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: admin/classes/class-tgm-plugin-activation.php:2074
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: admin/classes/class-tgm-plugin-activation.php:2075
+#, php-format
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: admin/classes/class-tgm-plugin-activation.php:2076
+msgid "All installations have been completed."
+msgstr ""
+
+#: admin/classes/class-tgm-plugin-activation.php:2077
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:75
+msgid "Header Settings"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:76
+msgid "Select logo for your site. You can also change logo and menu settings."
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:82
+msgid "Layout Settings"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:83
+msgid "Select blog type, layout and sidebar."
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:89
+msgid "Typography Settings"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:90
+msgid "Select font styles for headings and body text."
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:96
+msgid "Footer Settings"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:97
+msgid ""
+"Upload footer logo, change background color, set up fullwidth instagram "
+"widget"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:106
+#: admin/customizer/theme-customize-controls.php:110
+#: admin/customizer/theme-customize-controls.php:133
+msgid "General Settings"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:108
+msgid "Logo"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:109
+msgid "Menu"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:111
+msgid "Toggle Sidebar Settings"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:113
+msgid "Blog Layout"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:114
+msgid "Post Page Layout"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:115
+msgid "Category Pages Layout"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:116
+msgid "Search and Archive Pages Layout"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:118
+msgid "Background Settings"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:119
+msgid "Colors"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:121
+msgid "Body Text Settings"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:122
+msgid "H1 Settings"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:123
+msgid "H2 Settings"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:124
+msgid "H3 Settings"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:125
+msgid "H4 Settings"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:126
+msgid "H5 Settings"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:127
+msgid "H6 Settings"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:129
+msgid "Buttons Settings"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:131
+msgid "Home Page Slider"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:134
+msgid "Fullwidth Instagram Widget"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:158
+msgid "Upload the favicon"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:171
+msgid "Upload the apple touch icon"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:184
+msgid "Select site layout"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:188
+msgid "Full width"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:189
+msgid "Boxed"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:200
+msgid "Add site loader gif"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:213
+msgid "Upload loader gif"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:237
+msgid "Logo position"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:242
+#: admin/customizer/theme-customize-controls.php:381
+#: admin/customizer/theme-customize-controls.php:775
+#: admin/customizer/theme-customize-controls.php:875
+#: admin/customizer/theme-customize-controls.php:976
+#: admin/customizer/theme-customize-controls.php:1057
+#: admin/customizer/theme-customize-controls.php:1193
+#: admin/functions/page-meta.php:46
+msgid "Left"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:243
+#: admin/customizer/theme-customize-controls.php:382
+#: admin/customizer/theme-customize-controls.php:1194
+msgid "Center"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:244
+#: admin/customizer/theme-customize-controls.php:383
+#: admin/customizer/theme-customize-controls.php:776
+#: admin/customizer/theme-customize-controls.php:876
+#: admin/customizer/theme-customize-controls.php:977
+#: admin/customizer/theme-customize-controls.php:1058
+#: admin/customizer/theme-customize-controls.php:1195
+#: admin/functions/page-meta.php:47
+msgid "Right"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:256
+msgid "Upload the logo"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:269
+msgid "Upload the logo @2x."
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:282
+msgid "Padding top"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:297
+msgid "Padding bottom"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:313
+#: admin/customizer/theme-customize-controls.php:423
+#: admin/customizer/theme-customize-controls.php:689
+#: admin/customizer/theme-customize-controls.php:1132
+msgid "Background color"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:346
+msgid "Hide header menu"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:359
+msgid "Menu position"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:364
+msgid "Before Logo"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:365
+msgid "After Logo"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:376
+msgid "Menu align"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:394
+msgid "Margin top"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:408
+msgid "Margin bottom"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:434
+msgid "Item padding"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:453
+#: admin/customizer/theme-customize-controls.php:1848
+msgid "Font family"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:467
+#: admin/customizer/theme-customize-controls.php:1308
+#: admin/customizer/theme-customize-controls.php:1399
+#: admin/customizer/theme-customize-controls.php:1490
+#: admin/customizer/theme-customize-controls.php:1581
+#: admin/customizer/theme-customize-controls.php:1672
+#: admin/customizer/theme-customize-controls.php:1763
+#: admin/customizer/theme-customize-controls.php:1863
+msgid "Bold"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:480
+#: admin/customizer/theme-customize-controls.php:1321
+#: admin/customizer/theme-customize-controls.php:1412
+#: admin/customizer/theme-customize-controls.php:1503
+#: admin/customizer/theme-customize-controls.php:1594
+#: admin/customizer/theme-customize-controls.php:1685
+#: admin/customizer/theme-customize-controls.php:1776
+#: admin/customizer/theme-customize-controls.php:1877
+msgid "Uppercase"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:493
+#: admin/customizer/theme-customize-controls.php:1334
+#: admin/customizer/theme-customize-controls.php:1425
+#: admin/customizer/theme-customize-controls.php:1516
+#: admin/customizer/theme-customize-controls.php:1607
+#: admin/customizer/theme-customize-controls.php:1698
+#: admin/customizer/theme-customize-controls.php:1789
+#: admin/customizer/theme-customize-controls.php:1891
+msgid "Italic"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:506
+#: admin/customizer/theme-customize-controls.php:1271
+#: admin/customizer/theme-customize-controls.php:1347
+#: admin/customizer/theme-customize-controls.php:1438
+#: admin/customizer/theme-customize-controls.php:1529
+#: admin/customizer/theme-customize-controls.php:1620
+#: admin/customizer/theme-customize-controls.php:1711
+#: admin/customizer/theme-customize-controls.php:1802
+msgid "Font size"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:521
+#: admin/customizer/theme-customize-controls.php:1362
+#: admin/customizer/theme-customize-controls.php:1453
+#: admin/customizer/theme-customize-controls.php:1544
+#: admin/customizer/theme-customize-controls.php:1635
+#: admin/customizer/theme-customize-controls.php:1726
+#: admin/customizer/theme-customize-controls.php:1817
+msgid "Letterspacing"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:536
+msgid "Line Height"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:551
+#: admin/customizer/theme-customize-controls.php:638
+msgid "Font color"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:574
+msgid "Add search to header"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:588
+msgid "Search type"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:593
+msgid "Dropdown"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:594
+msgid "Default"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:606
+msgid "Add toggle sidebar"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:620
+msgid "Search and Toggle button position"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:625
+msgid "Logo Bar"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:626
+msgid "Menu Bar"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:650
+msgid "Header divider color"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:674
+msgid "Select sidebar for toggle sidebar"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:701
+#: admin/customizer/theme-customize-controls.php:2050
+msgid "Select widgets color theme"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:706
+#: admin/customizer/theme-customize-controls.php:2055
+#: admin/functions/post-meta.php:115
+msgid "Light"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:707
+#: admin/customizer/theme-customize-controls.php:2056
+#: admin/functions/post-meta.php:116
+msgid "Dark"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:719
+msgid "Sidebar width"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:754
+msgid "Blog type"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:758
+#: admin/customizer/theme-customize-controls.php:959
+#: admin/customizer/theme-customize-controls.php:1040
+msgid "List"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:759
+#: admin/customizer/theme-customize-controls.php:960
+#: admin/customizer/theme-customize-controls.php:1041
+msgid "Grid"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:771
+msgid "Blog sidebar layout"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:777
+#: admin/customizer/theme-customize-controls.php:877
+#: admin/customizer/theme-customize-controls.php:978
+#: admin/customizer/theme-customize-controls.php:1059
+#: admin/functions/page-meta.php:48
+msgid "None"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:789
+msgid "Select sidebar for blog"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:804
+msgid "Blog layout( for grid blog type )"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:808
+#: admin/customizer/theme-customize-controls.php:1009
+#: admin/customizer/theme-customize-controls.php:1090
+msgid "2 Columns"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:809
+#: admin/customizer/theme-customize-controls.php:1010
+#: admin/customizer/theme-customize-controls.php:1091
+msgid "3 Columns"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:821
+msgid "Select post order type"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:826
+msgid "Newest first"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:827
+msgid "Oldest first"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:828
+msgid "Random order"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:840
+msgid "Blog pagination type"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:845
+#: admin/customizer/theme-customize-controls.php:1108
+msgid "Older/Newer posts"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:846
+#: admin/customizer/theme-customize-controls.php:1109
+msgid "Classic pagination"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:871
+msgid "Post page sidebar layout"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:889
+msgid "Select sidebar for post page"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:903
+msgid "Custom post title margin top"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:922
+msgid "Custom post title margin bottom"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:972
+msgid "Search and archive pages sidebar layout"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:990
+msgid "Select sidebar for search and archive pages"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:1005
+msgid "Search and archive pages layout( for grid type )"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:1036
+msgid "Category pages type"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:1053
+msgid "Category pages sidebar layout"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:1071
+msgid "Select sidebar for category pages"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:1086
+msgid "Category pages layout( for grid type )"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:1103
+msgid "Category pages pagination type"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:1144
+msgid "Background Image Stretch"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:1158
+msgid "Upload background image"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:1171
+msgid "Background Repeat"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:1175
+msgid "No Repeat"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:1176
+msgid "Tile"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:1177
+msgid "Tile Horizontally"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:1178
+msgid "Tile Vertically"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:1189
+msgid "Background Position"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:1206
+msgid "Background Attachment"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:1210
+msgid "Fixed"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:1211
+msgid "Scroll"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:1229
+msgid "Skin Color 1"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:1240
+msgid "Skin Color 2"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:1257
+msgid "Body Text Font family"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:1294
+msgid "H1 Font family"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:1385
+msgid "H2 Font family"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:1476
+msgid "H3 Font family"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:1567
+msgid "H4 Font family"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:1658
+msgid "H5 Font family"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:1749
+msgid "H6 Font family"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:1905
+msgid "Extra Small Font size"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:1921
+msgid "Small Font size"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:1937
+msgid "Default Font size"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:1953
+msgid "Latge Font size"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:1969
+msgid "Button Border Radius"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:1984
+msgid "Button Border Width"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:2009
+msgid ""
+"You can put Master Slider or third-party plugin shortcode here to add slider "
+"on home page."
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:2038
+msgid "Footer color"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:2068
+msgid "Select footer widgets"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:2083
+msgid "Footer widgets layout"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:2087
+msgid "2 Col"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:2088
+msgid "3 Col"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:2089
+msgid "4 Col"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:2101
+msgid "Add Copyright Text"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:2114
+msgid "Upload footer logo"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:2127
+msgid "Upload footer logo @2x."
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:2151
+msgid "Add fullwidth footer instagram widget"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:2165
+msgid "Instagram username"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:2178
+msgid "Number of columns"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:2183
+msgid "4"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:2184
+msgid "5"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:2185
+msgid "6"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:2186
+msgid "7"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:2187
+msgid "8"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:2188
+msgid "9"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:2189
+msgid "10"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:2190
+msgid "11"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:2191
+msgid "12"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:2203
+msgid "Number of rows"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:2208
+msgid "1"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:2209
+msgid "2"
+msgstr ""
+
+#: admin/customizer/theme-customize-controls.php:2221
+msgid "Add hover"
+msgstr ""
+
+#: admin/functions/category-meta.php:11 admin/functions/category-meta.php:32
+msgid "Featured Image"
+msgstr ""
+
+#: admin/functions/category-meta.php:15 admin/functions/category-meta.php:37
+#: admin/functions/post-meta.php:195 admin/functions/post-meta.php:371
+msgid "Select image"
+msgstr ""
+
+#: admin/functions/category-meta.php:20 admin/functions/category-meta.php:42
+msgid "You could upload featured image for each category."
+msgstr ""
+
+#: admin/functions/page-meta.php:20
+msgid "Defaut Page Settings"
+msgstr ""
+
+#: admin/functions/page-meta.php:29
+msgid "Show page title"
+msgstr ""
+
+#: admin/functions/page-meta.php:31
+msgid "Select if you want to show page title"
+msgstr ""
+
+#: admin/functions/page-meta.php:40
+msgid "Sidebar layout"
+msgstr ""
+
+#: admin/functions/page-meta.php:42
+msgid "Select the position of sidebar on this page."
+msgstr ""
+
+#: admin/functions/page-meta.php:53
+msgid "Select sidebar"
+msgstr ""
+
+#: admin/functions/page-meta.php:55
+msgid "Select sidebar from list."
+msgstr ""
+
+#: admin/functions/page-meta.php:76
+msgid "Add Google Map"
+msgstr ""
+
+#: admin/functions/page-meta.php:78
+msgid "Select if you want to add fullwidth map to this page."
+msgstr ""
+
+#: admin/functions/page-meta.php:86
+msgid "Google Map Embed Code"
+msgstr ""
+
+#: admin/functions/page-meta.php:88
+msgid "Insert Google map embed code. "
+msgstr ""
+
+#: admin/functions/page-meta.php:88
+msgid "Learn More"
+msgstr ""
+
+#: admin/functions/page-meta.php:100
+msgid "Add Slider"
+msgstr ""
+
+#: admin/functions/page-meta.php:102
+msgid ""
+"You can put Master Slider or third-party plugin shortcode here to add slider "
+"on this page."
+msgstr ""
+
+#: admin/functions/post-like.php:170 admin/functions/post-like.php:177
+msgid "Like"
+msgstr "Мне нравится"
+
+#: admin/functions/post-like.php:192 admin/functions/post-like.php:252
+msgid "You Like:"
+msgstr ""
+
+#: admin/functions/post-like.php:216
+msgid "You don't like anything yet."
+msgstr ""
+
+#: admin/functions/post-like.php:284
+msgid "Today's Most Popular Posts"
+msgstr ""
+
+#: admin/functions/post-like.php:316
+msgid "This Month's Most Popular Posts"
+msgstr ""
+
+#: admin/functions/post-like.php:348
+msgid "This Week's Most Popular Posts"
+msgstr ""
+
+#: admin/functions/post-like.php:367
+msgid "Most Popular Posts"
+msgstr ""
+
+#: admin/functions/post-meta.php:29
+msgid "Image Post Settings"
+msgstr ""
+
+#: admin/functions/post-meta.php:30
+msgid "Gallery Post Settings"
+msgstr ""
+
+#: admin/functions/post-meta.php:31
+msgid "Audio Post Settings"
+msgstr ""
+
+#: admin/functions/post-meta.php:32
+msgid "Video Post Settings"
+msgstr ""
+
+#: admin/functions/post-meta.php:33
+msgid "Quote Post Settings"
+msgstr ""
+
+#: admin/functions/post-meta.php:34
+msgid "Link Post Settings"
+msgstr ""
+
+#: admin/functions/post-meta.php:35
+msgid "Chat Post Settings"
+msgstr ""
+
+#: admin/functions/post-meta.php:36
+msgid "Status Post Settings"
+msgstr ""
+
+#: admin/functions/post-meta.php:37
+msgid "Defaut Post Settings"
+msgstr ""
+
+#: admin/functions/post-meta.php:46
+msgid "Title Visability"
+msgstr ""
+
+#: admin/functions/post-meta.php:48
+msgid "Select when the post title is displayed."
+msgstr ""
+
+#: admin/functions/post-meta.php:52 admin/functions/post-meta.php:65
+#: admin/functions/post-meta.php:78 admin/functions/post-meta.php:91
+#: admin/functions/post-meta.php:138
+msgid "Always show"
+msgstr ""
+
+#: admin/functions/post-meta.php:53 admin/functions/post-meta.php:66
+#: admin/functions/post-meta.php:79 admin/functions/post-meta.php:92
+#: admin/functions/post-meta.php:139
+msgid "Only on post page"
+msgstr ""
+
+#: admin/functions/post-meta.php:54 admin/functions/post-meta.php:67
+#: admin/functions/post-meta.php:80 admin/functions/post-meta.php:93
+#: admin/functions/post-meta.php:140
+msgid "Never show"
+msgstr ""
+
+#: admin/functions/post-meta.php:59
+msgid "Content Visability"
+msgstr ""
+
+#: admin/functions/post-meta.php:61
+msgid "Select when the post content is displayed."
+msgstr ""
+
+#: admin/functions/post-meta.php:72
+msgid "Counters Visability"
+msgstr ""
+
+#: admin/functions/post-meta.php:74
+msgid "Select when the post counters are displayed."
+msgstr ""
+
+#: admin/functions/post-meta.php:85
+msgid "Share Options Visability"
+msgstr ""
+
+#: admin/functions/post-meta.php:87
+msgid "Select when the post share options are displayed."
+msgstr ""
+
+#: admin/functions/post-meta.php:99
+msgid "Spotlight Post"
+msgstr ""
+
+#: admin/functions/post-meta.php:101
+msgid "Show post content on featured image."
+msgstr ""
+
+#: admin/functions/post-meta.php:109
+msgid "Content color"
+msgstr ""
+
+#: admin/functions/post-meta.php:111
+msgid "Select content color for spotlight post."
+msgstr ""
+
+#: admin/functions/post-meta.php:122
+msgid "Fullwidth Post"
+msgstr ""
+
+#: admin/functions/post-meta.php:124
+msgid "Show fullwidth post(works only for grid blog type)."
+msgstr ""
+
+#: admin/functions/post-meta.php:132
+msgid "Reated Posts Visability"
+msgstr ""
+
+#: admin/functions/post-meta.php:134
+msgid "Select when related posts are displayed."
+msgstr ""
+
+#: admin/functions/post-meta.php:146
+msgid "Show Author Block"
+msgstr ""
+
+#: admin/functions/post-meta.php:148
+msgid "Select if you want to show author block on post page"
+msgstr ""
+
+#: admin/functions/post-meta.php:156
+msgid "Hide Post Navigation"
+msgstr ""
+
+#: admin/functions/post-meta.php:158
+msgid "Select if you want to hide prev/next post navigation on post page"
+msgstr ""
+
+#: admin/functions/post-meta.php:166
+msgid "Custom Post Title"
+msgstr ""
+
+#: admin/functions/post-meta.php:169
+msgid "Show Custom Post Title"
+msgstr ""
+
+#: admin/functions/post-meta.php:171
+msgid ""
+"Select if you want to show custom post title with background image on post "
+"page"
+msgstr ""
+
+#: admin/functions/post-meta.php:179
+msgid "Custom Title"
+msgstr ""
+
+#: admin/functions/post-meta.php:187
+msgid "Title Background Image"
+msgstr ""
+
+#: admin/functions/post-meta.php:189
+msgid "Select a background image for custom post title"
+msgstr ""
+
+#: admin/functions/post-meta.php:362
+msgid "Post Image"
+msgstr ""
+
+#: admin/functions/post-meta.php:364
+msgid ""
+"Uploaded image will be shown on post page.It also will be shown on blog page "
+"if featured image wasn't selected."
+msgstr ""
+
+#: admin/functions/post-meta.php:405
+msgid "Gallery Images"
+msgstr ""
+
+#: admin/functions/post-meta.php:407
+msgid "Uploaded images will be shown as slider on blog and post pages."
+msgstr ""
+
+#: admin/functions/post-meta.php:413
+msgid "Select images"
+msgstr ""
+
+#: admin/functions/post-meta.php:422
+msgid "Slider Mode"
+msgstr ""
+
+#: admin/functions/post-meta.php:424
+msgid "Type of transition between slides."
+msgstr ""
+
+#: admin/functions/post-meta.php:428
+msgid "Horizontal"
+msgstr ""
+
+#: admin/functions/post-meta.php:429
+msgid "Vertical"
+msgstr ""
+
+#: admin/functions/post-meta.php:430
+msgid "Fade"
+msgstr ""
+
+#: admin/functions/post-meta.php:436
+msgid "Auto Slideshow"
+msgstr ""
+
+#: admin/functions/post-meta.php:438
+msgid "Slides will automatically transition."
+msgstr ""
+
+#: admin/functions/post-meta.php:446
+msgid "Pause"
+msgstr ""
+
+#: admin/functions/post-meta.php:448
+msgid "The amount of time (in ms) between each auto transition"
+msgstr ""
+
+#: admin/functions/post-meta.php:522
+msgid "Audio File URL or Embed Code"
+msgstr ""
+
+#: admin/functions/post-meta.php:524
+msgid ""
+"Select audio file (.mp3 for best compatibility) OR paste your 3rd party (eg: "
+"soundcloud, spotify) embed code here."
+msgstr ""
+
+#: admin/functions/post-meta.php:530
+msgid "Select audio file"
+msgstr ""
+
+#: admin/functions/post-meta.php:568
+msgid "Embed Code"
+msgstr ""
+
+#: admin/functions/post-meta.php:570
+msgid "Paste your 3rd party (eg: youtube, vimeo) embed code here."
+msgstr ""
+
+#: admin/functions/post-meta.php:607
+msgid "The Quote"
+msgstr ""
+
+#: admin/functions/post-meta.php:609
+msgid "The actual quote for this post."
+msgstr ""
+
+#: admin/functions/post-meta.php:617
+msgid "Optional Quote Reference"
+msgstr ""
+
+#: admin/functions/post-meta.php:619
+msgid "A persons name or the quotes source."
+msgstr ""
+
+#: admin/functions/post-meta.php:666
+msgid "Link URL"
+msgstr ""
+
+#: admin/functions/post-meta.php:668
+msgid "The hyperlink displayed in the post."
+msgstr ""
+
+#: admin/functions/post-meta.php:676
+msgid "Optional Link Description"
+msgstr ""
+
+#: admin/functions/post-meta.php:678
+msgid "An optional short description about the link."
+msgstr ""
+
+#: admin/functions/post-meta.php:725
+msgid "Chat Dialog"
+msgstr ""
+
+#: admin/functions/post-meta.php:727
+msgid "The chat dialog needs to be formated like this:"
+msgstr ""
+
+#: admin/functions/post-meta.php:730
+msgid ""
+"\n"
+"John: Hello\n"
+"Mary: Hi John\n"
+"Jim: Bye."
+msgstr ""
+
+#: admin/functions/post-meta.php:773
+msgid "Embedded Twitter Code"
+msgstr ""
+
+#: admin/functions/post-meta.php:775
+msgid "If you would rather embed a tweet you can do so here."
+msgstr ""
+
+#: includes/templates/comments.php:25
+#: includes/templates/archive/archive-loop.php:58
+#: includes/templates/blog/blog-loop.php:99
+#: includes/templates/category/category-loop.php:62
+#: includes/templates/post/post-page.php:52
+msgid "<"
+msgstr ""
+
+#: includes/templates/comments.php:26
+#: includes/templates/archive/archive-loop.php:59
+#: includes/templates/blog/blog-loop.php:100
+#: includes/templates/category/category-loop.php:63
+#: includes/templates/post/post-page.php:51
+msgid ">"
+msgstr ""
+
+#: includes/templates/instagram-footer.php:44
+msgid "Unable to communicate with Instagram."
+msgstr ""
+
+#: includes/templates/instagram-footer.php:46
+msgid "Instagram did not return a 200."
+msgstr ""
+
+#: includes/templates/instagram-footer.php:51
+#: includes/templates/instagram-footer.php:59
+#: includes/templates/instagram-footer.php:62
+msgid "Instagram has returned invalid data."
+msgstr ""
+
+#: includes/templates/instagram-footer.php:95
+msgid "Instagram Image"
+msgstr ""
+
+#: includes/templates/instagram-footer.php:115
+msgid "Instagram did not return any images."
+msgstr ""
+
+#: includes/templates/archive/archive-loop.php:65
+#: includes/templates/blog/blog-loop.php:106
+#: includes/templates/category/category-loop.php:69
+msgid "Older posts"
+msgstr "Ранние записи"
+
+#: includes/templates/archive/archive-loop.php:66
+#: includes/templates/blog/blog-loop.php:107
+#: includes/templates/category/category-loop.php:70
+msgid "Newer posts"
+msgstr "Свежие записи"
+
+#: includes/templates/blog/blog-loop.php:80
+msgid "Featured"
+msgstr ""
+
+#: includes/templates/header/menu-template.php:22
+msgid "Menu "
+msgstr ""
+
+#: includes/templates/post/page-page.php:22
+#: includes/templates/post/post-page.php:157
+msgid "Comments"
+msgstr ""
+
+#: includes/templates/post/post-grid.php:53
+#: includes/templates/post/post-list.php:56
+msgid "Read more"
+msgstr ""
+
+#: includes/templates/post/post-grid.php:66
+#: includes/templates/post/post-list.php:69
+#: includes/templates/post/post-page.php:74
+msgid "Share"
+msgstr ""
+
+#: includes/templates/post/post-list.php:88
+#: includes/templates/post/post-page.php:113
+msgid "Related posts"
+msgstr ""
+
+#: includes/templates/post/post-page.php:68
+msgid "Tags"
+msgstr ""
+
+#: includes/templates/post/post-page.php:168
+msgid "Previous post"
+msgstr ""
+
+#: includes/templates/post/post-page.php:175
+msgid "Next post"
+msgstr ""

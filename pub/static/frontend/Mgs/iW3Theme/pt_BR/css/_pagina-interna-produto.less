@@ -1,0 +1,393 @@
+.catalog-product-view {
+	#maincontent {
+		margin: 40px auto 0;
+	}
+}
+// Imagem
+.product.media {
+	// Thumbs
+	.fotorama__nav--thumbs {
+		// ativa
+		.fotorama__thumb-border {
+			border-color: @cor-destaque-1;
+		}
+	}
+
+	// Slider
+	// indicadores (bolinhas)
+	.fotorama__nav--dots {
+		.fotorama__active {
+			.fotorama__dot {
+				background-color: @cor-destaque-1;
+				border-color: @cor-destaque-1;
+			}
+		}
+	}
+}
+
+// Informacoes
+.product-info-main {
+	.clear-elements();
+
+	// Nome do Produto
+	.page-title-wrapper {
+		.page-header {
+			margin: -20px 0 0;
+			padding: 0;
+			.fonte4();
+		}
+	}
+
+	// Sku
+	.product-info-stock-sku {
+		float: left;
+		text-align: left;
+		margin: 5px 0;
+		padding: 0;
+		line-height: 15px;
+		.fonte4();
+
+		// Estoque
+		.stock {
+			display: none;
+		}
+	}
+
+	// Preco
+	.product-info-price {
+		.clear-elements();
+		padding: 0 0 25px;
+		margin: 15px 0 25px;
+		border-bottom: 1px solid @cor-neutra-2;
+
+		.price-box {
+			display: block;
+			width: 100%;
+			position: relative;
+
+			&:after {
+				content: 'à vista ou em 12x com juros a assumir';
+				display: block;
+				font-size: 12px;
+				.fonte4();
+				color: #666;
+			}
+			.price {
+				.preco-geral();
+			}
+
+			.special-price {
+				display: inline-block;
+				padding-top: 15px;
+			}
+			.product-atribute.iw3-label.metro {
+				display: inline-block;
+			}
+
+			.old-price {
+				position: absolute;
+				top: 0;
+				left: 0;
+				color: #bebebe;
+				font-size: 12px;
+				margin-right: 5px;
+
+				.price-container {
+					font-size: 12px;
+				}
+
+				&:before {
+					content: '';
+					width: 100%;
+					height: 1px;
+					background-color: #bebebe;
+					position: absolute;
+					top: 8px;
+					left: 0;
+				}
+
+				.price-label {
+					display: inline-block;
+					margin-right: 2px;
+				}
+
+				.price {
+					.preco-promo();
+					color: #bebebe;
+					font-size: 14px;
+					line-height: initial;
+				}
+			}
+		}
+	}
+	.product.pricing {
+		display: none;
+	}
+
+	// Descricao Curta
+	.product.attribute.overview {
+		clear: both;
+		float: left;
+		margin: 0 0 25px;
+		width: 100%;
+		border-bottom: 1px solid @cor-neutra-2;
+		padding: 0 0 25px;
+
+		p {
+			margin: 0;
+			.fonte4();
+		}
+	}
+
+	// Acoes
+	.product-add-form {
+		.clear-elements();
+		margin: 0;
+		padding: 0;
+		width: ~"calc(100% - 63px)";
+
+		.box-tocart {
+			.clear-elements();
+			margin: 0;
+
+			// Qtd
+			.qty {
+				#plus,#minus {
+					height: 24px;
+					border: 1px solid #777777;
+					background-color: #fff;
+					margin: 5px 2px;
+					width: 12px;
+					padding: 0;
+				}
+				input {
+					float: left;
+				}
+				float: left;
+				margin: 0px 25px 8px 0;
+
+				.label {
+					.fonte4();
+					color: #000;
+					font-size: 12px;
+					margin: 0 0 5px;
+					padding: 0;
+				}
+				.control {
+					input {
+						.estilos-campos();
+						padding: 5px;
+						width: 65px;
+					}
+				}
+			}
+
+			// Btn Comprar
+			.actions {
+				float: left;
+				width: ~"calc(100% - 90px)";
+
+				#product-updatecart-button,
+				#product-addtocart-button {
+					.btn-primario();
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	// Favoritos
+	.product-social-links {
+		float: left;
+		margin: 0;
+
+		// Favoritos
+		.product-addto-links {
+
+			// Favoritos
+			.towishlist {
+				.btn-neutro();
+				padding: 9px 0 0 5px;
+				margin: 0 0 0 15px;
+				height: 48px;
+				width: 48px;
+				line-height: 28px;
+				border-radius: 0.5em !important;
+				font-size: 0;
+				
+				&:before {
+					.reset-img();
+					.icon-coracao();
+					padding: 16px 18px;
+				}
+			}
+
+			// Comparar
+			.tocompare {
+				display: none;
+			}
+		}
+
+		// Texto Parcelas
+		> p {
+			display: none;
+		}
+		.pagseguro-installments-table {
+			display: none;
+		}
+
+		// Email
+		.mailto.friend {
+			display: none;
+		}
+	}
+
+	// Tabs de Informacoes
+	.product.detailed {
+		.clear-elements();
+		margin-top: 30px;
+
+		.items {
+			.title {
+				.data {
+					background: #FFF;
+					border: 0;
+					border-bottom: 1px dashed @cor-neutra-1;
+					color: @cor-neutra-1;
+					.fonte4();
+					font-size: 14px;
+					letter-spacing: 2px;
+					padding: 0 8px;
+					margin: 0 7.5px;
+					transition: all 0.4s;
+
+					@media @desktop-1199 {
+						font-size: 12px;
+						padding: 0;
+					}
+
+					@media @tablet-991 {
+						font-size: 11px;
+						padding: 0;
+						margin: 0 5px;
+						letter-spacing: 1px;
+					}
+				}
+				&:hover,
+				&:focus,
+				&.active,
+				&.active:hover,
+				&.active:focus {
+					.data {
+						border-bottom: 1px dashed @cor-destaque-1-2;
+						color: @cor-destaque-1-2 !important;
+					}
+				}
+			}
+			
+			#attributeinformacao_nutricional {
+				img {
+					max-width: 100%;
+				}
+			}
+
+			.content {
+				padding: 15px;
+				border: 0;
+
+				table {
+					tr {
+						&:nth-child(even) {
+							th, td {
+								background-color: @cor-neutra-3;
+							}
+						}
+
+						th, td {
+							padding: 10px !important;
+						}
+
+						th {
+							color: @cor-neutra-1;
+							.fonte4();
+							font-size: 15px;
+							font-weight: normal;
+						}
+						td {
+							color: @cor-neutra-1;
+							.fonte5();
+
+							p {
+								margin: 0;
+							}
+						}
+					}
+				}
+
+				.review-add {
+					.fieldset.review-fieldset {
+						.label {
+							color: @cor-neutra-1;
+							.fonte4();
+							font-size: 15px;
+							font-weight: normal;
+							padding: 0;
+						}
+						.control {
+							input,
+							textarea {
+								.estilos-campos();
+							}
+						}
+					}
+					.review-form-actions {
+						.primary {
+							.btn-primary {
+								.btn-secundario();
+								width: auto;
+							}
+						}
+					}
+				}
+				form#review-form {
+					max-width: 616px;
+				}
+			}
+		}
+	}
+}
+
+
+// Relacionados
+.block.related {
+	.clear-elements();
+
+	.setas-produtos();
+
+	// Titulo
+	.content-heading {
+		.title {
+			.titulo-paginas();
+			text-align: center;
+			border: 0;
+		}
+		&:before {
+			top: 25px;
+			background: -moz-radial-gradient(center, ellipse cover, #fff 25%, @cor-destaque-1 100%);
+			background: -webkit-gradient(radial, center center, 0, center center, 100%, color-stop(25%, #fff), color-stop(100%, @cor-destaque-1));
+			background: -webkit-radial-gradient(center, ellipse cover, #fff 25%, @cor-destaque-1 100%);
+			background: -ms-radial-gradient(center, ellipse cover, #fff 25%, @cor-destaque-1 100%);
+			background: radial-gradient(ellipse at center, #fff 25%, @cor-destaque-1 100%);
+		}
+	}
+}
+span.label.rating-label {
+	span {
+		color: @cor-neutra-1;
+	}
+}
+.review-legend {
+	font-size: 20px;
+	margin-bottom: 1rem;
+	margin-top: 1.5rem;
+}

@@ -1,0 +1,130 @@
+.box-newsletter {
+
+	// Texto
+	.text {
+		margin: 0 0 7px;
+		color: #FFF;
+		.fonte4();
+		font-size: 10px;
+
+		&:before {
+			content: "";
+			display: inline-block;
+			width: 138px;
+		}
+
+		@media @tablet-991 {
+			width: 100%;
+			text-align: center;
+			
+			&:before {
+				display: none;
+			}
+		}
+	}
+
+	.title {
+		display: block;
+		float: left;
+		margin: 8px 0 0;
+		color: #FFF;
+		font-size: 21px;
+		.fonte3();
+
+		@media @tablet-991 {
+			display: none;
+		}
+	}
+	
+	// Campos
+	.block.newsletter {
+		float: right;
+		width: ~"calc(100% - 142px)";
+
+		@media @tablet-991 {
+			width: 100%;
+			padding: 0 15px;
+		}
+
+		.form-group.newsletter {
+			float: left;
+			width: ~"calc(100% - 120px)";
+			margin: 0;
+
+			@media @celular-420 {
+				width: ~"calc(100% - 90px)";
+			}
+
+			input {
+				.estilos-campos();
+				height: 41px;
+				padding: 7px 15px 0;
+				background: #FFF;
+				border-color: #FFF !important;
+				.fonte2();
+				color: #000;
+				font-size: 14px;
+				border-radius: 0 !important;
+
+				@media @celular-420 {
+					font-size: 12px;
+					padding: 7px 10px 0;
+				}
+			}
+		}
+
+		// Btn Increver
+		.actions {
+			float: left;
+			width: 120px;
+			margin: 0;
+
+			@media @celular-420 {
+				width: 90px;
+			}
+
+			.subscribe {
+				.btn-primario();
+				height: 41px;
+				width: 100%;
+				min-width: 0;
+				border-radius: 0 !important;
+				font-size: 17px;
+				letter-spacing: 2px;
+
+				@media @celular-420 {
+					letter-spacing: 1px;
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}
+//modal mensagem  iw3
+.modal-iw3-news {
+	background-color:  rgba(0, 0, 0, 0.6);
+	display: none;
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 10001;
+}
+.conteudo-modal-news {
+	-moz-box-sizing: border-box;
+	padding: 30px;
+	font-size: 16px;
+	width: 410px;
+	background-color: #fefefe;
+	z-index: 1002;
+	margin: 118px auto;
+	text-align: center;
+	font-weight: bold;
+}
+span.fechar-modal {
+	background-color: #ff9f00;
+	padding: 6px 23px;
+	color: #fff;
+	cursor: pointer;
+}

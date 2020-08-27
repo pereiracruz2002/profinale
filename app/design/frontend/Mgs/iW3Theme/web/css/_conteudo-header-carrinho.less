@@ -1,0 +1,172 @@
+.box-carrinho {
+	float: left;
+	padding: 5px 10px;
+
+	@media @celular-380 {
+		width: auto;
+
+		.minicart-wrapper {
+			.action {
+				.text {
+					display: none !important;
+				}
+			}
+		}
+	}
+
+	.minicart-wrapper {
+		width: 100%;				
+		margin: 0;
+		padding: 0 0 2px;
+
+		> .action {
+			display: block;
+
+			.text {
+				display: block;
+				float: left;
+				margin: 0 0 0 8px;
+				.fonte4();
+				color: #FFF;
+				font-size: 14px;
+
+				@media @tablet-767 {
+					font-size: 0;
+				}
+			}
+
+			.counter.qty {
+				position: absolute;
+				background: @cor-destaque-1-2;
+				top: -8px;
+				right: -15px;
+				border-radius: 50px;
+				min-width: 15px;
+				height: 15px;
+				line-height: 15px;
+				font-size: 10px;
+			}
+
+			&:before {
+				/* display: block; */
+				float: left;
+				.reset-img();
+				.icon-cart();
+
+				@media @celular-380 {
+					display: block !important;
+					background-size: 19px;
+					padding: 11px;
+				}
+			}	
+		}
+
+		// Resultados
+		.block-minicart {
+			padding: 15px 15px 5px;
+
+			@media @celular-420 {
+				width: 300px;
+			}
+
+			.block-content {
+				// btn fehcar
+				.action.close,
+				// qtd itens
+				.items-total,
+				// subtotal
+				.subtotal {
+					display: none;
+				}
+
+				.actions {
+					margin: 0;
+
+					// Btn Checkout
+					.primary {
+						#top-cart-btn-checkout {
+							.btn-primario();
+							width: 100%;
+							max-width: 100%;
+						}
+					}
+
+					// Btn Carrinho
+					.secondary {
+						margin: 15px 0 0;
+
+						.viewcart {
+							display: block;
+							.btn-secundario();
+							width: auto;
+							max-width: 100%;
+						}
+					}
+				}
+				
+				// Itens
+				.minicart-items-wrapper {
+					margin: 0;
+					padding: 10px 0;
+
+					#mini-cart {
+						.product-item {
+							.clear-elements();
+
+							// Infos
+							.product-item-details {
+
+								// Nome
+								.product-item-name {
+									a {
+										.fonte3();
+										text-transform: uppercase;
+										color: @cor-neutra-1;
+										font-size: 16px;
+										text-decoration: none;
+									}
+								}
+
+								.product-item-pricing {
+									// Preco
+									.price-container {
+										float: left;
+										margin: 2px 15px 0 0;
+
+										.price {
+											.preco-geral();
+											font-size: 22px;
+										}
+									}
+
+									// Qtd
+									.details-qty {
+										float: right;
+										margin: 0;
+
+										.label {
+											display: none;
+										}
+										.item-qty {											
+											margin: 0;
+											.estilos-campos();
+											width: 65px;
+											padding: 5px;
+										}
+									}
+								}
+
+								// Acoes
+								.actions {
+									.clear-elements();
+									text-align: right;
+								}
+							}
+						}
+					}
+
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,75 @@
+<?php $block = $this->getBlock() ?>
+<?php $welcomeMessage = $block->getWelcome(); ?>
+
+<div class="header-content">
+	<div class="container">
+		<div class="row">
+
+			<!-- Logo -->
+			<div class="logo col-md-4">
+				<?php echo $block->getChildHtml('logo') ?>
+			</div>
+
+			<!-- Conteudo -->
+			<div class="content col-md-8">
+				<div class="top-links">
+					<!-- Bloco Estático top_links_content -->
+					<?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('static_block_identifier')->toHtml() ?>
+				</div>
+				<div class="store-actions">
+
+					<!-- Busca -->
+					<div class="dropdown dropdown-switcher switcher-search" id="switcher-search">
+						<button class="switcher-toggle dropdown-toggle" type="button" data-toggle="dropdown"><i class="fa fa-search" aria-hidden="true"></i></button>
+						<div class="dropdown-menu">
+							<?php echo $block->getChildHtml('top.search') ?>
+						</div>
+					</div>
+
+					<!-- Minha Conta -->
+					<div class="dropdown dropdown-switcher my-account switcher-account" id="switcher-account">
+						<button class="switcher-toggle dropdown-toggle" type="button" data-toggle="dropdown"><?php echo __('My Account'); ?><i class="fa fa-angle-down" aria-hidden="true"></i></button>
+						<div class="dropdown-menu">
+							<?php echo $block->getChildHtml('top.links') ?>
+						</div>
+					</div>
+
+					<!-- Carrinho -->
+					<button class="action nav-toggle hidden-lg"><span class="fa fa-bars" aria-hidden="true"></span></button>
+					<?php echo $block->getChildHtml('minicart') ?>
+				</div>
+			</div>
+
+			<!-- Menu -->
+			<div class="menu col-md-12">
+				<div class="row">
+					<div class="col-md-4 box-01">
+						
+					</div>
+					<div class="col-md-8 box-02 menu">
+						<button class="action close-nav-button"><span class="fa fa-times" aria-hidden="true"></span></button>
+						<div class="megamenu-content<?php if($block->getChildHtml('megamenu')!=''): ?> mgs-menu<?php else: ?> mgt-menu<?php endif ?>">
+							<ul class="nav nav-tabs">
+								<li class="active"><a data-toggle="tab" href="#main-Menucontent"><?php echo __('Menu'); ?></a></li>
+								<li><a data-toggle="tab" href="#main-Accountcontent"><?php echo __('My Account'); ?></a></li>
+							</ul>
+							<div class="tab-content">
+								<div id="main-Menucontent" class="tab-pane fade in active">
+									<?php if($block->getChildHtml('megamenu')!=''): ?>
+										<?php echo $block->getChildHtml('megamenu') ?>
+									<?php else: ?>
+										<?php echo $block->getChildHtml('catalog.topnav') ?>
+									<?php endif ?>
+								</div>
+								<div id="main-Accountcontent" class="tab-pane fade">
+									<?php echo $block->getChildHtml('top.links') ?>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>				
+			</div>
+
+		</div>
+	</div>
+</div>

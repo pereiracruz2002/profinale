@@ -1,0 +1,80 @@
+// Tags (Novo / Promocao)
+@import "_vm-tags-produto.less";
+
+// Exibicao de Produtos em Grid
+@import "_produtos-grid.less";
+
+// Exibicao de Produtos em Lista
+@import "_produtos-list.less";
+
+.products,
+.mgs-products {
+	.item {
+
+		// Imagem
+		.photo {
+			img {
+				border: 0;
+				padding: 0;
+				border-radius: 0;
+			}
+		}
+
+		.product.details {
+
+			// Nome
+			.product.name {
+				a {
+					.fonte3();
+					text-transform: uppercase;
+					color: @cor-neutra-1;
+					font-size: 16px;
+					text-decoration: none;
+				}
+			}
+
+			// Preco
+			.price-box {
+
+				.price {
+					.preco-geral();
+
+					@media @desktop-1199-768 {
+						font-size: 30px;
+					}
+				}
+
+				.old-price {
+
+					.price {
+						.preco-promo();
+						color: #bebebe;
+						font-size: 14px;
+					}
+				}
+			}
+
+			// Btn Comprar
+			.product-item-inner {
+
+				.actions-primary {
+
+					// Btn Comprar
+					.tocart-iw3,
+					.tocart {
+						.btn-primario();
+
+					}
+
+					// Fora de Estoque
+					.stock {
+						span {
+							display: block;
+							.btn-secundario();
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,28 @@
+<?php /** * Copyright © Magento, Inc. All rights reserved. * See COPYING.txt for license details. */ /** @var $block \Magento\Catalog\Block\Product\View */ ?> <?php $_product = $block->getProduct(); ?> <?php $buttonTitle = __('Add to Cart'); ?> <?php if ($_product->isSaleable()): ?> <div class="box-tocart"><div class="fieldset"><?php if ($block->shouldRenderQuantity()): ?> <div class="field qty"><label class="label" for="qty"><span><?= /* @escapeNotVerified */ __('Qty') ?></span></label> <div class="control"><input type="number" name="qty" id="qty" value="<?= /* @escapeNotVerified */ $block->getProductDefaultQty() * 1 ?>" title="<?= /* @escapeNotVerified */ __('Qty') ?>" class="input-text qty" onchange="mudarIncremet()" data-validate="<?= $block->escapeHtml(json_encode($block->getQuantityValidators())) ?>" /></div></div><?php endif; ?> <div class="actions"><button type="submit" title="<?= /* @escapeNotVerified */ $buttonTitle ?>" class="action primary tocart" id="product-addtocart-button"><span><?= /* @escapeNotVerified */ $buttonTitle ?></span></button> <?= $block->getChildHtml('', true) ?></div></div></div><?php $objectManager = \Magento\Framework\App\ObjectManager::getInstance(); $_atributo = $objectManager->get('Magento\Catalog\Model\Product')->load($_product->getId()); if($qtyIncremet = $_atributo->getData('incrementar_decimal')): if($_atributo->getData('metro')) :?> <script>
+                window.onload = mudarIncremet;
+                function mudarIncremet(){
+                    var totalQty,inputQty = "<?=str_replace(',','.',$qtyIncremet)?>";
+                    totalQty = document.getElementById('qty').value;
+                    document.getElementById('increment-info').innerHTML = totalQty+ ' peça(s) =  '+String((totalQty  * inputQty)).replace(".", ",")+' metros';
+                }</script><span style="font-size: 14px" id="increment-info"></span> <?php else : ?> <script>
+                function mudarIncremet(){}</script><?php endif; ?> <?php else : ?> <script>
+            function mudarIncremet(){}</script><?php endif; ?> <?php endif; ?> <?php if ($block->isRedirectToCartEnabled()) : ?> <script type="text/x-magento-init">
+    {
+        "#product_addtocart_form": {
+            "Magento_Catalog/product/view/validation": {
+                "radioCheckboxClosest": ".nested"
+            }
+        }
+    }</script><?php else : ?> <script type="text/x-magento-init">
+    {
+        "#product_addtocart_form": {
+            "Magento_Catalog/js/validate-product": {}
+        }
+    }</script><?php endif; ?> <script type="text/x-magento-init">
+        {
+            "#product_addtocart_form": {
+                "catalogAddToCart": {
+                    "bindSubmit": true
+                }
+            }
+        }</script>

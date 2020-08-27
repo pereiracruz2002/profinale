@@ -1,0 +1,160 @@
+.footer {
+	margin-top: 50px;
+
+	.middle-footer {
+		padding: 68px 0 50px;
+		background: #0b0b0b;
+
+		// Logo 
+		.box-logo {
+
+			@media @desktop-1199 {
+				margin: 10px 0 0;
+			}
+
+			img {
+				max-width: 100%;
+
+				@media @tablet-991 {
+					display: block;
+					margin: 0 auto;
+				}
+			}
+		}
+
+		// Sociais
+		.box-sociais {
+			text-align: right;
+			margin: 23px 0 0;
+
+			@media @tablet-991 {
+				text-align: center;
+				margin: 25px 0;
+			}
+		}
+
+		// News
+		@import "_conteudo-footer-newsletter.less";
+	}
+
+	.bottom-footer {
+		background: #0b0b0b;
+		text-align: left;
+
+		.item {
+			padding-left: 0;
+
+			.title {
+				.titulo-footer();
+			}
+
+			.marcas {
+				margin-top: 35px;
+
+			}
+
+			ul {
+				li {
+					margin: 0 0 7px;
+					padding: 0;
+
+					a {
+						.texto-footer();
+						.transicao();
+
+						@media @desktop-1199 {
+							font-size: 12px;
+						}
+					}
+				}
+			}
+
+			
+
+			p {
+				.texto-footer();
+
+				a {
+					color: #000;
+					text-decoration: none;
+					.transicao();
+
+					&:hover {
+						color: #333;
+					}
+
+					&[href*="mailto"] {
+						color: @cor-destaque-1-2;
+						display: block;
+					}
+				}
+			}
+
+			&.col-1 {
+
+				.title {
+					display: none;
+				}
+				li {
+					&:nth-child(2) {
+						a {
+							color: #fff;
+							&:before {
+								.reset-img();
+								.icon-phone();
+								display: inline-block;
+								vertical-align: middle;
+								margin-right: 3px;
+							}
+							&:hover {
+								    opacity: 0.4;
+							}
+						}
+					}
+					&:nth-child(3) {
+						a {
+							color: #fff;
+
+							.fa-whatsapp {
+								font-size: 17px;
+								vertical-align: middle;
+								margin-right: 3px;
+								width: 24px;
+								text-align: center;
+							}
+
+							&:hover {
+								color: #6d6e72;
+							}
+						}
+					}
+				}
+
+				a, p{ 
+					font-size: 13px;
+
+					@media @desktop-1199 {
+						font-size: 12px;
+					}
+				}
+			}
+
+			img {
+				max-width: 100%;
+			}
+
+			@media @tablet-991 {
+				text-align: center;
+
+				.title {
+					text-align: center;
+					margin-top: 25px;
+				}
+
+				p {
+					text-align: center;
+				}
+			}
+		}
+	}
+}

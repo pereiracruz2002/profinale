@@ -1,0 +1,2 @@
+a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1580909102;s:6:"expire";i:9999999999;s:4:"tags";s:23:"72b_REFLECTION,72b_MAGE";}
+a:2:{s:22:"createAdminAccessToken";a:4:{s:4:"type";s:6:"string";s:10:"isRequired";b:1;s:11:"description";s:13:"Token created";s:14:"parameterCount";i:2;}s:22:"revokeAdminAccessToken";a:4:{s:4:"type";s:4:"bool";s:10:"isRequired";b:1;s:11:"description";s:0:"";s:14:"parameterCount";i:1;}}

@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:500,700,900');
+
+.raleway() {
+	font-family: 'Raleway', sans-serif;
+}
+
+.raleway-medium() {
+	.raleway();
+	font-weight: 500;
+}
+.raleway-bold() {
+	.raleway();
+	font-weight: 700;
+}
+.raleway-black() {
+	.raleway();
+	font-weight: 900;
+}
+
+.fonte1() {
+	font-family: 'Gotham-Ultra';
+}
+.fonte2() {
+	font-family: 'Gotham-BookItalic';
+}
+.fonte3() {
+	font-family: 'Gotham-Bold';
+}
+.fonte4() {
+	font-family: 'Gotham-Book';
+}
+.fonte5() {
+	font-family: 'Gotham-Medium';
+}
+.fonte6() {
+	font-family: 'Gotham-Black';
+}
+.fonte7() {
+	font-family: 'Gotham-Light';
+}
+
+.size-titulo1() {
+	font-size: 4.1rem;
+}
+.size-btn() {
+	font-size: 15px;
+}
+
+
+// Tipografias Gerais
+.label() {
+	.fonte4();
+	font-weight: normal;
+}
+
+
+// Links Menu Mobile
+.links-menu() {
+	.fonte5();
+	color: #000;
+	text-transform: uppercase;
+	font-weight: normal;
+	font-size: 13px;
+	padding: 5px;
+	border-bottom: 1px solid transparent;
+	.transicao();
+
+	&:hover,
+	&:focus {
+		background: transparent;
+		border-bottom-color: #000;
+		text-decoration: none;
+	}
+
+	@media @desktop-1199 {
+		color: #000;
+		background: transparent;
+		padding: 10px !important;
+
+		&:hover,
+		&:focus {
+			background: @cor-destaque-1-2;
+			border-bottom-color: transparent !important;
+		}
+	}
+}
+
+
+// Titulo das Paginas
+.titulo-paginas() {
+	.fonte1();
+	.size-titulo1();
+	color: @cor-destaque-1;
+	border-bottom: 1px solid @cor-destaque-1;
+	margin: 0 0 40px;
+}
+.page-title-wrapper {
+	.clear-elements();
+	margin: 20px 0 0;
+}
+.page-header {
+	.titulo-paginas();
+}
+.sub-titulo() {
+	.fonte4();
+	font-size: 30px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	border-bottom: 0;
+}
+
+
+// Preco
+.preco-geral() {
+	.fonte4();
+	color: @cor-neutra-1;
+	font-size: 33px;
+}
+
+.preco-promo() {
+	font-size: 18px;
+	color: @cor-neutra-2;
+}
+
+
+// Sidebar - Coluna da Esquerda
+.links-sidebar() {
+	.fonte4();
+	outline: none;
+	color: #333;
+	cursor: pointer;
+	display: block;
+	font-weight: 600;
+	margin: 0;
+	overflow: hidden;
+	padding: 10px 40px 0 10px;
+	position: relative;
+	text-decoration: none;
+	text-transform: uppercase;
+	word-break: break-all;
+	font-size: 14px;
+	z-index: 1;
+}
+
+
+// Footer
+.titulo-footer() {    
+	margin: 0 0 15px;
+	color: @cor-neutra-1;
+	.fonte3();
+	font-size: 16px;
+	text-align: left;
+	text-transform: none;
+}
+
+.texto-footer() {
+	color: @cor-neutra-1;
+	.fonte7();
+	font-size: 14px;
+	text-align: left;
+	text-transform: none;
+	text-decoration: none;
+
+	&[href]:hover {
+		color: @cor-neutra-3;
+	}
+
+	&[href*="mailto"] {
+		color: #FFF;
+	}
+}
+
+
+// Cabecalhos de Texto (Login / Cadastro)
+.login-font() {
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 16px;
+	margin: 0;
+	color: #000;
+
+	@media @celular-480 {
+		font-size: 15px;
+	}
+}
+.login-title() {
+	.login-font();
+	.fonte4();
+	letter-spacing: 2px;
+}
+.login-sub-title {
+	.login-font();
+	.fonte4();
+	font-size: 12px;
+	letter-spacing: 1px;
+
+	@media @celular-480 {
+		font-size: 12px;
+	}
+}

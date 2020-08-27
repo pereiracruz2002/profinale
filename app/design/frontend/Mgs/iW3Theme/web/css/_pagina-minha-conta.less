@@ -1,0 +1,341 @@
+.account {
+	.main {
+		.block-title {
+			.title {
+				.sub-titulo();
+				font-size: 26px;
+				margin-top: 0;
+			}
+		}
+
+		.account-sub-title {
+			margin-top: 0;
+		}
+
+		.block {
+			margin: 0;
+
+			// Review de Pedidos na Aba Geral
+			&.block-dashboard-orders {
+				.block-title.order {
+					strong {
+						.sub-titulo();
+						font-size: 26px;
+						margin-top: 0;
+						font-weight: normal;
+					}
+
+					.action.view {
+						.btn-neutro;
+						display: block;
+						width: auto;
+						max-width: 110px;
+						margin-left: 0;
+					}
+				}
+
+				.table-wrapper.orders-recent {
+					overflow-x: scroll;
+
+					#my-orders-table {
+						width: 845px;
+
+						th {
+							.padrao-th();
+						}
+
+						td {
+							.padrao-td();
+						}
+
+						@media @tablet-767 {
+							margin-bottom: 0;
+						}
+					}
+				}
+
+				.action {
+					.btn-neutro();
+				}
+			}
+
+
+			&.block-dashboard-info {
+				// Editar Infos de Acesso na Aba Geral
+				@media @tablet-991-768 {
+					.box-information {
+						.box-actions {
+							.action.edit {
+								margin-bottom: 15px;
+							}
+						}
+					}
+				}
+
+				// Editar Newsletter na Aba Geral
+				.box-newsletter {
+					.box-content {
+						min-height: 40px;
+
+						@media @tablet-767 {
+							min-height: auto;
+						}
+					}
+				}
+			}
+
+			// Editar Enderecos na Aba Geral
+			&.block-dashboard-addresses {
+				> .action.edit {
+					.btn-neutro();
+    				padding: 0;
+    				float: inherit;
+    				width: auto;
+				}
+
+				.box-billing-address {
+					padding: 0;
+
+					@media @tablet-767 {
+						margin-top: 25px !important;
+					}
+				}
+
+
+				@media @tablet-767 {
+					.box-shipping-address {
+						padding: 0;
+					}
+				}
+
+				.box-shipping-address,
+				.box-billing-address {
+					.box-content {
+						min-height: 160px;
+
+						@media @tablet-767 {
+							min-height: auto;
+						}
+					}
+				}
+
+			}
+
+			// Enderecoes Cadastrados na Aba Editar Livro de Endereços
+			&.block-addresses-default {
+				.title {
+					margin-bottom: 0;
+				}
+
+				.box-address-billing,
+				.box-address-shipping {
+					padding: 0;
+
+					.box-actions {
+						.action.edit {
+							width: auto;
+
+							@media @tablet-767 {
+								width: 50%;
+    							min-width: 270px;
+							}
+
+							@media @celular-420 {
+								width: 100%;
+							}
+						}
+					}
+				}
+			}
+
+			@media @tablet-767 {
+				.clear-elements();
+				margin-top: 25px;
+
+				&:first-of-type {
+					margin-top: 0;
+				}
+			}
+		}
+
+		.block-content {
+			margin: 0;
+			padding: 0;
+		}
+
+		.box {
+			margin: 25px 0;
+
+			@media @tablet-767 {
+				.clear-elements();
+				margin: 25px 0 0;
+
+				&:first-child {
+					margin-top: 0;
+				}
+			}
+		}
+
+		select,
+		input:not([type='checkbox']) {
+			.estilos-campos();
+		}
+
+		.label {
+			.label();
+		}
+
+		.edit {
+			.btn-primario();
+			width: 50%;
+			min-width: 150px;
+			display: inline-block;
+			float: left;
+
+			@media @tablet-991-768 {
+				font-size: 14px;
+			}
+
+			@media @celular-420 {
+				width: 100%;
+				margin-bottom: 15px;
+			}	
+		}
+
+		.change-password,
+		.action.delete {
+			.btn-secundario();
+			width: 50%;
+			min-width: 150px;
+			display: inline-block;
+			float: left;
+
+			@media @celular-420 {
+				width: 100%;
+			}	
+		}
+
+		.actions-toolbar {
+			.primary {
+				float: left;
+				padding: 0;
+				margin: 0;
+
+				@media @tablet-767 {
+					width: 50% !important;
+					min-width: 270px !important;
+				}
+
+				@media @celular-420 {
+					width: 100% !important;
+				}
+
+				.action.add.btn-primary {
+					.btn-primario();
+					width: auto;
+					max-width: 100%;
+					min-width: 150px;
+
+					@media @tablet-767 {
+						width: 50% !important;
+    					max-width: 100%;
+    					min-width: 270px;
+					}
+
+					@media @celular-420 {
+						width: 100% !important;
+					}		
+				}
+			}
+
+			.secondary {
+				float: right !important;
+				padding: 0;
+				margin: 0;
+
+				@media @tablet-767 {
+					width: 100%;
+					margin-top: 25px;
+				}
+
+				.back {
+					.btn-neutro();
+					display: block;
+					width: auto;
+					max-width: 150px;
+
+					@media @tablet-767 {
+						border: 1px solid !important;
+						margin-left: 0 !important;
+					}
+				}
+			}
+		}
+
+		.block-addresses-list {
+			.items.addresses {
+				margin:  0 0 30px;
+			}
+		}
+	}
+
+	// pedidos
+	@import "_pagina-minha-conta-pedidos.less";
+
+	// Favoritos
+	@import "_pagina-minha-conta-favoritos.less";
+}
+
+
+@media @tablet-767 {
+	.account {
+		#maincontent {
+			position: relative;
+			padding-top: 30px;
+
+			.sidebar.sidebar-main {
+			    position: absolute;
+				top: 15px;
+				left: 15px;
+				background: #FFF;
+				border: 1px solid #333;
+				border-radius: 3px;
+				padding: 5px 10px;
+				width: ~"calc(100% - 30px)";
+
+				&:before {
+					content: "\f107";
+					font: normal normal normal 14px/1 FontAwesome;
+					font-size: 25px;
+					cursor: pointer;
+					float: right;
+					display: inline-block;
+					position: relative;
+					z-index: 2;
+				}
+
+				&:after {
+					content: "Meu Perfil";
+				    font-size: 18px;
+				    font-weight: normal;
+					.fonte4();
+					display: inline-block;
+					cursor: pointer;
+					float: left;
+				}
+
+				> .account-nav {
+					display: none;
+				    margin: 0 0 -30px;
+				    background: #FFF;
+				    z-index: 1;
+				    position: relative;
+
+					.block-title {
+						border-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+}

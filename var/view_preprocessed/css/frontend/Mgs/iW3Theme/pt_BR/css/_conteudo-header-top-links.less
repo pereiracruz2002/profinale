@@ -1,0 +1,93 @@
+> .top-links {
+	background-color: #000;
+	.clear-elements();
+
+	.top-links-content {
+		float: left;
+
+		.box-links { 
+			.item {
+				background: #000;
+				.fonte4();
+				color: #FFF;
+				display: inline-block;
+				text-transform: uppercase;
+				padding: 8px 10px;
+				font-size: 12px;
+				text-decoration: none;
+
+				&.item-3 {
+					border-left: 1px solid #737373;
+
+					&:before {
+						.reset-img();
+						.icon-phone();
+					}
+
+					&:hover {
+						&:before {
+							filter: invert(100%);
+						}
+					}
+
+					@media @tablet-640 {
+						font-size: 0;
+						border: 0;
+						position: relative;
+						padding: 13px 0;
+						vertical-align: middle;
+					}
+				}
+				&.item-4 {
+					border-right: 1px solid #737373;
+					border-left: 1px solid #737373;
+
+					.fa-whatsapp {
+						font-size: 18px;
+						vertical-align: middle;
+						margin-right: 5px;
+					}
+
+					@media @tablet-640 {
+						font-size: 0;
+						border: 0;
+						padding: 7px 5px;
+						vertical-align: middle;
+
+						.fa-whatsapp {
+							margin-right: 0;
+						}
+					}
+				}
+
+				&:hover {
+					background: #FFF;
+					color: #000;
+				}
+
+				@media @celular-540 {
+					padding: 8px 2px;
+					font-size: 10px;					
+				}
+
+				@media @celular-420 {
+					position: initial !important;
+				}
+			}
+		}
+	}
+
+	.store-actions {
+		float: right;
+		/* width: ~"calc(100% - 100px)"; */
+		width: auto;
+		clear: none;
+		margin: 0;
+
+		@import '_conteudo-header-busca.less';
+
+		@import '_conteudo-header-minha-conta.less';
+
+		@import '_conteudo-header-carrinho.less';
+	}
+}

@@ -1,0 +1,78 @@
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ * Desenvolvido por Jamacio Rocha
+ */
+-->
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+    .checkout-success table {
+        display: block !important;
+    }
+</style>
+<table style="display: none">
+    <tr>
+        <th><?=__('ID')?></th>
+        <th><?=__('Produto')?></th>
+        <th><?=__('SKU')?></th>
+        <th><?=__('QTD')?></th>
+        <th><?=__('Preço')?></th>
+    </tr>
+    <?php
+    $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+    $order = $objectManager->create('Magento\Sales\Model\Order')->loadByIncrementId($block->getOrderId());
+    $orderItems = $order->getAllItems();
+
+    $qtdtotal = 0;
+    $precototal = 0;
+    foreach ($orderItems as $item) {
+        $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+        $product = $objectManager->get('Magento\Catalog\Model\Product')->load($item->getProductId());
+
+        if($product->getSpecialPrice())
+            $preco = $product->getSpecialPrice();
+        else
+            $preco = $product->getPrice();
+
+        $qtd = $item->getQtyOrdered();
+        if($product->getPrice()) {
+            echo '<tr>';
+            echo '<td>' . $item->getProductId() . '</td>';
+            echo '<td>' . $item->getName() . '</td>';
+            echo '<td>' . $item->getSku() . '</td>';
+            echo '<td>' .(int)$qtd . '</td>';
+            echo '<td>' . $this->helper('Magento\Framework\Pricing\Helper\Data')->currency($preco) . '</td>';
+            echo ' </tr>';
+            $qtdtotal += $qtd;
+            $precototal += ($preco * $qtd);
+        }
+    }
+    ?>
+    <tfoot>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><?='Qtd total: '.$qtdtotal?></td>
+        <td><?='Total: '.$this->helper('Magento\Framework\Pricing\Helper\Data')->currency($precototal) ?></td>
+    </tr>
+    </tfoot>
+
+
+</table>

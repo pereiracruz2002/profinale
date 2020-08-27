@@ -1,0 +1,61 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<div class="block newsletter">
+    <div class="content">
+        <form class="form subscribe"
+            novalidate
+            method="post"
+            data-mage-init='{"validation": {"errorClass": "mage-error"}}'
+            id="newsletter-validate-detail">
+            <div class="field form-group newsletter">
+                <div class="control">
+                    <input name="email" type="email" id="newsletter"
+                                placeholder="<?php  /* @escapeNotVerified */ echo __('Enter your email address') ?>"
+                                data-validate="{required:true, 'validate-email':true}"/>
+                </div>
+            </div>
+            <div class="actions">
+                <a class="action subscribe btn btn-primary" onclick="chamaModalMsgNews()" title="<?php /* @escapeNotVerified */ echo __('Subscribe') ?>">
+                    <span><?php /* @escapeNotVerified */ echo __('Subscribe') ?></span>
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="iw3-messages-conteudo iw3-messages-newsletter" style="display: none;">
+    <div class="iw3-messages">
+        <div class="iw3-message-container"><?php echo __('Obrigado, por se registrar em nossa newsletter!') ?> </div>
+        <div class="iw3-messages-action continuar" style=" float: right; width: 90px;"><a href="javascript:fechaModalMsgNews()">Fechar</a></div>
+
+    </div>
+</div>
+<script>
+    function chamaModalMsgNews(){
+        jQuery(".iw3-messages-newsletter").fadeIn();
+        sendFile();
+    }
+
+    function fechaModalMsgNews(){
+        jQuery(".iw3-messages-newsletter").fadeOut();
+    }
+
+</script>
+
+<script>
+    function sendFile()
+    {
+
+        var url = "<?php /* @escapeNotVerified */ echo $block->getFormActionUrl() ?>";
+        var formData = new FormData(document.getElementById("newsletter-validate-detail"));
+        xhr = new XMLHttpRequest();
+        xhr.open("POST", url, true);
+        xhr.send(formData); //Send to server
+    }
+</script>

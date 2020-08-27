@@ -1,0 +1,569 @@
+.checkout-index-index {
+  padding-bottom: 0;
+
+	#maincontent {
+		margin: 40px auto 0;
+	}
+
+	
+	// Sidebar Direita
+	.modal-custom.opc-sidebar {
+		outline: none !important;
+
+		.opc-block-summary,
+		.opc-block-shipping-information {
+			outline: none !important;
+			padding: 30px;
+		}
+	}
+
+  // Limpa Header
+  .page-wrapper {
+	> .header {
+	  display: none !important;
+	}
+  }
+
+  // Limpa Footer
+  .footer {
+	.middle-footer {
+	  display: none;
+	}
+  }
+
+  // Formata Header
+  .header {
+	border: 0;
+
+	.content {
+	  display: block;
+	  text-align: center;
+	  padding: 10px 0 0;
+
+	  .logo {
+		display: block;
+		margin: 0 auto;
+		text-align: center;
+		width: 215px;
+		position: relative;
+
+		img {
+		  max-width: 100%;
+		  height: auto;
+		  margin: 0;
+		}
+	  }
+	}
+  }
+
+  // Etapas
+  .opc-progress-bar {
+	text-align: center;
+
+	.opc-progress-bar-item {
+	  &._active {
+		> span {
+		  &:before {
+			background: @cor-destaque-1;
+		  }
+		}
+		&:before {
+		  background: @cor-destaque-1;
+		}
+	  }
+	  &._complete>span {
+		color: #b1b1b1;
+	  }
+
+	  span {
+	  	.fonte1();
+	  }
+	}
+	ul.opc-progress-bar {
+	  text-align: center;
+	}
+
+	li {
+	  display: inline-block;
+	  border: 0;
+	  border-bottom: 1px solid transparent;
+	  padding: 5px;
+	  font-family: 'robotomedium';
+	  font-size: 16px;
+	  margin: 15px 15px 0;
+	  @media @tablet-767 {
+		&._active {
+		  border-bottom-color: #000;
+		}
+	  }
+	}
+  }
+
+  #opc-sidebar {
+  	> div {
+  		.clear-elements();
+  	}
+  }
+
+  // Campos
+  #checkoutSteps {
+  	.clear-elements();
+	margin-bottom: 20px;
+
+	li {
+		.clear-elements();
+		margin-bottom: 20px;
+	}
+
+	.step-title {
+	  .sub-titulo();
+	}
+	.label {
+	  .label();
+	  white-space: inherit;
+
+
+	}
+	input:not([type='radio']),
+	select {
+	  .estilos-campos();
+	}
+
+	.actions-toolbar {
+		.clear-elements();
+
+		.action.primary {
+			.btn-primario();
+			width: auto;
+			min-width: 185px;
+
+			@media @celular-420 {
+				max-width: 100%;
+				width: 100%;
+			}
+		}
+	}
+
+	.action-select-shipping-item {
+	  .btn-primario();
+	  width: auto;
+	  min-width: 185px;
+	  display: none;
+	}
+
+	// Entrega
+	.checkout-shipping-address {
+	  .clear-elements();
+		
+		.step-title {
+			&:after {
+				content: "Cadastre ou escolha abaixo o endereço de entrega do seu pedido.";
+			    display: block;
+			    font-size: 14px;
+			    margin: 5px 0 25px;
+			    width: 100%;
+			    white-space: initial;
+			    line-height: 16px;
+			}
+		}
+
+	  .shipping-address-items {
+		.shipping-address-item {
+			float: left;
+			clear: both;
+			width: 100%;
+			border: 1px solid transparent;
+			padding: 15px 15px 15px 45px;
+			border-bottom: 1px solid #000;
+			position: relative;
+
+		  .action-select-shipping-item {
+			position: absolute;
+			top: 50%;
+			margin-top: -13px;
+			left: 0;
+			transition: all 0s;
+		    display: block;
+		    float: left;
+		    width: auto;
+		    min-width: 0;
+		    font-size: 0;
+		    .icon-check-off();
+		    background-repeat: no-repeat;
+		    background-position: center 4px;
+		    background-size: 70%;
+		    background-color: #FFF;
+		    border-color: #b9b9b8;
+		  }
+
+		  &.selected-item {		  
+		  	.action-select-shipping-item  {
+		    	.icon-check();
+    			border-color: @cor-destaque-1;
+		  	}
+		  }
+		}
+		.action.edit-address-link {
+		  .btn-secundario();
+		}
+	  }
+	}
+
+	.action-show-popup {
+	  .btn-secundario();
+	  width: auto;
+	  min-width: 185px;
+	  margin: 30px 0 0;
+	  float: left;
+	  clear: both;
+
+	  @media @celular-420 {
+	  	max-width: 100%;
+	  	width: 100%;
+	  }
+	}
+
+	// Pagamento
+	#checkout-payment-method-load {
+
+		.payment-methods {
+			.payment-group {
+				.payment-method-title.choice {
+					.clear-elements();
+				    padding: 20px 0 0;
+				    margin: 0 0 20px;
+				}
+			}
+		}
+
+	  .payment-method-content {
+	  	.clear-elements();
+	  	margin: 0;
+
+		@media @tablet-767 {
+			padding: 0 0 20px;
+		}
+
+		> p {
+		  display: none;
+		}
+
+		.payment-method-billing-address {
+			~ p {
+				  display: block !important;
+				  margin: 0 0 20px;
+				  .clear-elements();
+				  max-width: 420px;
+				}
+
+			.checkout-billing-address {
+				> div {
+					.clear-elements();
+					margin: 0 0 20px;
+				}
+
+				> .fieldset {
+					.clear-elements();
+					margin: -20px 0 20px;
+
+					> .field-select-billing {
+						> .label {
+							display: none;
+						}
+					}
+
+					input,
+					select {
+						width: 100%;
+						max-width: 100%;
+					}
+				}
+			}
+
+		  	.billing-address-details {
+				.action-edit-address {
+				  .btn-secundario();
+				}
+	  		}
+		}
+
+		.actions-toolbar {
+		  div.primary {
+			width: 100%;
+
+			.action-update {
+			  .btn-primario();
+			  float: left;
+			  width: auto;
+			  min-width: 150px;
+
+			  @media @celular-420 {
+			  	max-width: 100%;
+			  	width: 100%;
+			  	margin-bottom: 20px;
+			  }
+			}
+			.action-cancel {
+			  .btn-secundario();
+			  margin: 0 0 0 15px;
+
+			  @media @celular-420 {
+			  	max-width: 100%;
+			  	width: 100%;
+			  	margin: 0;
+			  }
+			}
+		  }
+		}
+	  }
+	}
+
+	// Review
+	#opc-shipping_method {
+	  .table-checkout-shipping-method {
+		tr {
+		  .col-carrier {
+			display: none;
+		  }
+		}
+	  }
+	}
+  }
+
+  // Modal Novo Endereco
+  .modal-inner-wrap {
+  	@media @tablet-840 {
+	    width: ~"calc(100% - 30px)" !important;
+	    left: 0 !important;
+	    margin-left: 15px !important;
+    }
+
+	// Titulo
+	.modal-header {
+	  padding-top: 0;
+	  padding-left: 30px;
+
+	  .modal-title {
+		.sub-titulo();
+	  }
+	}
+
+	// Conteudo
+	.modal-content {
+	  #shipping-new-address-form {
+		margin: 0;
+
+		label {
+		  .label();
+		}
+
+		input,
+		select {
+		  .estilos-campos();
+		}
+	  }
+	}
+
+	// Acoes
+	.modal-footer {
+
+	  // Salvar
+	  .action-save-address {
+		.btn-primario();
+		width: auto;
+	  }
+
+	  // Cancelar
+	  .action-hide-popup {
+		.btn-secundario();
+	  }
+	}
+  }
+
+  // codigo de desconto
+  form#discount-form {
+	.payment-option-inner {
+	  .field {
+		&:after {
+		  content: "Caso possua algum cupom, por favor digite o código no campo abaixo";
+		  display: block;
+		  font-size: 14px;
+		  margin: 5px 0 25px;
+		  width: 100%;
+		  white-space: initial;
+		  line-height: 16px;
+		}
+	  }
+	}
+  }
+
+  .payment-option._collapsible.opc-payment-additional.discount-code {
+	.payment-option-content {
+	  display: block !important;
+	  border: 1px dashed #cdcdcd;
+	  padding: 15px;
+	  border-radius: 3px !important;
+	  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	  -webkit-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+	  margin: 27px 0 45px;
+	  .clear-elements();
+	}
+	.payment-option-title.field.choice {
+	  display: none !important;
+	}
+  }
+  button.action.action-apply, button.action.action-cancel {
+	.btn-primario();
+	float: left;
+	width: auto;
+	min-width: 150px;
+  }
+
+
+  .checkout-index-index {
+	.checkout-payment-method {
+	  .payment-option-content {
+		.form-discount {
+		  .field {
+			>.label {
+			  display: block !important;
+			}
+		  }
+		  .field>.label {
+			display: block !important;
+			font-size: 28px;
+			text-align: left;
+			margin: 8px 0;
+		  }
+		}
+
+	  }
+
+	}
+  }
+
+  // Review Extra
+  .opc-estimated-wrapper {
+	display: none !important;
+  }
+}
+
+.payment-method {
+  label {
+	width: calc(100% - 13px);
+	float: left;
+	display: block;
+	min-width: 0;
+  }
+}
+.checkout-payment-method {
+  .payment-method-title {
+	.label {
+	  display: inline-block;
+	  font-size: 1.8rem;
+	  font-weight: 300;
+	  display: block;
+	  white-space: initial;
+	  text-align: left;
+	  float: left;
+	}
+  }
+  .payment-method._active {
+	.payment-method-content {
+	  p {
+		float: left;
+	  }
+	}
+  }
+}
+.payment-method-title.field.choice {
+  input {
+	float: left;
+	margin-right: 10px;
+  }
+}
+
+.checkout-index-index {
+  .checkout-billing-address {
+	[name$="billingAddressbanktransfer.country_id"] {
+	  display: none;
+	}
+	fieldset.fieldset {
+	  float: left;
+	  width: 100%;
+	}
+  }
+  .fieldset#billing-new-address-form {
+	min-width: 100%;
+
+	.field-tooltip.toggle {
+	    position: absolute;
+	    top: 22px;
+	    right: 10px;
+	}
+
+	.field-tooltip-content {		
+	    position: absolute;
+	    right: -10px;
+	    top: 30px;
+	    left: inherit;
+
+	    &:before {
+		    content: "";
+		    width: 0;
+		    height: 0;
+		    border-left: 5px solid transparent;
+		    border-right: 5px solid transparent;
+		    border-bottom: 5px solid #999999;
+		    position: absolute;
+		    top: -16px;
+		    right: 12px;
+		    left: inherit;
+	    }
+
+	    &:after {
+	    	display: none;
+	    }
+	}
+  }
+  .billing-address-details {
+	width: 376px;
+  }
+  .payment-method {
+	&:nth-child(4) {
+	  .checkout-billing-address {
+		display: none;
+	  }
+	}
+  }
+}
+input#billing-address-same-as-shipping-banktransfer {
+  float: left;
+  margin-left: 10px;
+}
+
+.billing-address-same-as-shipping-block.field.choice {
+  span {
+	position: relative;
+	bottom: 2px;
+  }
+}
+
+
+// PAGSEGURO
+.pagseguro-direct-payment {
+	.tabs-content {
+		.item-tab {
+			.form-group {
+				 #bankList {
+				 	label {
+				 		&:first-child,
+				 		&:last-child {
+				 			display: none;
+				 		}
+				 	}
+				 }
+			}
+		}
+	}
+}

@@ -1,0 +1,42 @@
+.checkout-onepage-success {
+	.page-title-wrapper {
+		display: none;
+	}	
+	.checkout-success {
+		table {
+			display: none !important;
+		}
+	}
+}
+
+.checkout-success {
+	&:before {
+		content: "Compra realizada com sucesso!";
+		display: block;
+		.titulo-paginas();
+		border-bottom: 0;
+		margin: 40px 0;
+	}
+
+	p {
+		.fonte5();
+		font-weight: normal;
+		font-size: 17px;
+
+		a {
+			.fonte3();
+			color: @cor-destaque-1-2;
+		}
+	}
+
+	// Btn Imprimir
+	.actions-toolbar {
+		margin: 40px 0 0;
+
+		.primary {
+			.action.primary {
+				.btn-primario();
+			}
+		}
+	}
+}

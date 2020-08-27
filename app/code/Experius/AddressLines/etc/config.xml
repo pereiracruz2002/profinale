@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <customer>
+            <experius_address_lines>
+                <enabled>0</enabled>
+                <experius_address_line1>
+                    <line_enabled>1</line_enabled>
+                    <line_label>Street</line_label>
+                    <line_required>1</line_required>
+                    <line_validation_classes>max_text_length:255,min_text_length:1</line_validation_classes>
+                    <line_min_length>1</line_min_length>
+                    <line_max_length>255</line_max_length>
+                </experius_address_line1>
+                <experius_address_line2>
+                    <line_enabled>0</line_enabled>
+                    <line_label>Housenumber</line_label>
+                    <line_required>1</line_required>
+                    <line_validation_classes>validate-number:1</line_validation_classes>
+                </experius_address_line2>
+                <experius_address_line3>
+                    <line_enabled>0</line_enabled>
+                    <line_label>Addition</line_label>
+                    <line_required>0</line_required>
+                    <line_validation_classes>max_text_length:255,min_text_length:1</line_validation_classes>
+                    <line_max_length>255</line_max_length>
+                </experius_address_line3>
+                <experius_address_line4>
+                    <line_enabled>0</line_enabled>
+                    <line_label></line_label>
+                    <line_required></line_required>
+                    <line_validation_classes></line_validation_classes>
+                </experius_address_line4>
+            </experius_address_lines>
+        </customer>
+    </default>
+</config>

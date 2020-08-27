@@ -1,0 +1,98 @@
+.box-regua-infos {
+	padding: 30px;
+    margin: -90px 0 0;
+    background: #FFF;
+    position: relative;
+    z-index: 1;
+
+    @media @tablet-767 {
+    	margin: 0;
+    }
+
+    @media @celular-380 {
+    	padding: 30px 15px;
+    }
+	.box-regua {
+		display: flex;
+		justify-content: space-between;
+		align-items: stretch;
+
+		.item {
+			width: 100%;
+			display: flex;
+			align-items: center;
+
+			.box-text {
+				.txt {
+					// .fonte1;
+					font-size: 19px;
+					margin: 0 0 0 15px;
+
+					@media @desktop-1199 {
+						font-size: 15px;
+					}
+
+					@media @tablet-991 {
+						font-size: 16px;
+						line-height: 18px;
+					}
+
+					@media @tablet-767 {
+						font-size: 17px;
+					}
+				}
+			}
+
+			@media @tablet-640 {
+				img {
+					max-width: 30px;
+				}
+
+				.box-text {
+					.txt {
+						margin: 0 0 0 5px;
+						font-size: 14px;
+					}
+				}
+			}
+
+			@media @celular-520 {
+				img {
+					max-width: 20px;
+				}
+
+				.box-text {
+					.txt {
+						margin: 0 0 0 5px;
+						font-size: 12px;
+						line-height: 14px;
+					}
+				}
+			}
+
+			@media @celular-420 {
+				img {
+					display: none;
+				}
+
+				.box-text {
+					.txt {
+						margin: 0;
+						text-align: center;
+					}
+				}
+
+				&:not(:last-child) {
+					margin: 0 -10px;
+
+					.box-text {
+						border-right: 1px solid #cfcfcf;
+						margin: 0 10px;
+						text-align: center;
+						font-size: 11px;
+					}
+				}
+			}
+		}
+	}
+}

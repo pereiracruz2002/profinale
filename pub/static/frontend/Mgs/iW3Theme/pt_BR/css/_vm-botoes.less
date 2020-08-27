@@ -1,0 +1,62 @@
+.padrao-fonte() {
+    .size-btn();
+    .fonte5();
+    text-transform: uppercase;
+    text-align: center;   
+}
+
+.padrao-formato() {
+    padding: 12px;
+    border-radius: 0; 
+}
+
+// Btn Primario (Comprar)
+.btn-primario() {
+    .padrao-formato();
+    .padrao-fonte();
+    background: @cor-destaque-1;
+    border: 1px solid @cor-destaque-1;
+    color: #FFF;
+    text-decoration: none;
+    width: 100%;
+    min-width: 150px;
+
+    &:hover {
+      background: @cor-destaque-1-2;
+      border-color: @cor-destaque-1-2;    	
+  }
+}
+
+.btn-secundario() {
+    .padrao-formato();
+    .padrao-fonte();
+    background: @cor-neutra-3;
+    border: 1px solid @cor-neutra-3;
+    text-decoration: none;
+    color: @cor-neutra-1;
+
+    &:hover {
+        background: @cor-neutra-2;
+        border-color: @cor-neutra-2; 
+        color: #FFF;     
+    }
+}
+
+.btn-neutro() {
+    display: inline-block;
+    line-height: 19px;
+    .padrao-fonte();
+    .padrao-formato();
+    border: 1px solid;
+    background: transparent;
+    color: @cor-neutra-1;
+    text-decoration: none;
+    margin-left: 20px;
+
+    &:hover,
+    &:focus {
+        background: @cor-neutra-2;
+        border-color: @cor-neutra-2;
+        color: #FFF;
+    }
+}

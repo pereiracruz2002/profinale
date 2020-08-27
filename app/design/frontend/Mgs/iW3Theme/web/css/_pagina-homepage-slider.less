@@ -1,0 +1,53 @@
+.section-full-banner {
+	clear: both;
+
+	.no-padding {
+		padding: 0;
+	}
+
+	.box-banner {
+		padding: 0;
+
+		// Indicadores (Setas)
+		.owl-nav {
+			> div {
+				border: 0  !important;
+				background: transparent !important;
+				
+				.fa-arrow-left {
+					&:before {
+						.reset-img();
+						.icon-seta-esquerda();
+					}
+				}
+				.fa-arrow-right {
+					&:before {
+						.reset-img();
+						.icon-seta-direita();
+					}
+				}
+			}
+		}
+	}
+
+	// Cenas (Bolinhas)
+	.owl-dots {
+		.owl-dot {
+			span {					
+				background: #FFF;
+				height: 16px;
+				width: 16px;
+				margin: 0 5px;
+			}
+
+			&.active {
+				span {
+					background-color: #f03c32;
+					border-color: #FFF;
+					height: 20px;
+					width: 20px;
+				}
+			}
+		}
+	}
+}

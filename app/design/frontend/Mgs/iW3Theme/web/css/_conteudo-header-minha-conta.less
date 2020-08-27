@@ -1,0 +1,91 @@
+.my-account {
+	float: left;
+    padding: 5px;
+    
+    @media @tablet-991 {
+    	display: none;
+    }
+
+	button {
+		.fonte4();
+		color: #FFF;
+		font-size: 14px;
+		background: transparent;
+		border: 0;
+
+		&:before {
+			float: left;
+			/* display: block; */
+			display: none;
+			.reset-img();
+			.icon-user();
+		}
+
+		.fa-angle-down {
+			margin: 0 0 0 8px;
+		}
+	}
+
+	// Dropdown
+	.dropdown-menu {
+		padding: 0;
+		border: 1px solid #c2c2c2;
+		border-radius: 0;
+		margin: -2px 0 0;
+
+		&:before {
+			content: "";
+			position: absolute;
+			border: 6px solid;
+			border-color: transparent transparent #FFF transparent;
+			z-index: 99;
+			top: -12px;
+			left: 2px;				
+		}
+
+		.top-links {
+			margin: 0;
+
+			li {
+				width: 100%;
+				text-align: left;
+				padding: 0;
+
+				&.compare,
+				&:last-child {
+					display: none;
+				}
+				&.wishlist {
+					.qty {
+						display: none;
+					}
+				}
+
+				a {
+					display: block;
+					padding: 5px 10px;
+					border-bottom: 1px solid #c2c2c2;
+					.fonte4();
+					font-size: 14px;
+					text-decoration: none;
+					color: #000;
+					transition: all 0.3s;
+
+					&:hover {
+						border-bottom-color: #000;
+						background-color: #000;
+						color: #FFF;
+						text-decoration: none;
+
+					}
+				}
+
+				&:last-child {
+					a {
+						border-bottom: 0;
+					}
+				}
+			}
+		}					
+	}
+}

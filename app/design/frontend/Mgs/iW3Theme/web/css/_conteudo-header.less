@@ -1,0 +1,51 @@
+.header {
+	@media @desktop-1199 {
+		margin-bottom: -2px;
+	}
+
+	.header-content {
+
+		// Logo
+		@import "_conteudo-header-logo.less";
+
+		// Top Links
+		@import "_conteudo-header-top-links.less";
+
+		// Minha Conta / Carrinho
+		.store-actions {
+			float: left;
+			width: 100%;
+			clear: both;
+			@media @desktop-1199 {
+				margin: 0 0 12px;					
+			}
+
+			// Minha Conta
+			@import "_conteudo-header-minha-conta.less";
+
+			// Carrinho
+			@import "_conteudo-header-carrinho.less";
+		}
+
+		// Conteudo
+		.content {
+			padding: 20px 0;
+			.clear-elements();
+			border-bottom: 1px solid #000;
+
+			@media @tablet-991 {
+				.store-actions {
+					.search {
+						max-width: ~"calc(100% - 370px)" !important;
+					}
+				}
+			}
+		}
+	}
+
+	// Menu
+	@import "_conteudo-menu.less";
+
+	// Busca
+	@import "_conteudo-header-busca.less";
+}

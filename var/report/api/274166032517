@@ -1,0 +1,1 @@
+s:358:"Fatal Error: 'Declaration of Anymarket\Anymarket\Model\Data\AnymarketOrderControl::setIdAnymarket() must be compatible with Anymarket\Anymarket\Api\Data\AnymarketOrderControlInterface::setIdAnymarket(Anymarket\Anymarket\Api\Data\String $idAnymarket)' in '/home/rrqvksjs/public_html/app/code/Anymarket/Anymarket/Model/Data/AnymarketOrderControl.php' on line 6";

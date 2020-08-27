@@ -1,0 +1,157 @@
+.search {
+	float: left;
+	margin: 14px 0 0;
+
+	.search-form  {
+		width: 320px;
+		margin: 0;
+
+		@media @tablet-767 {
+			width: 220px;
+		}
+
+		.form-search {
+			input {
+				.estilos-campos();
+				.fonte2();
+				height: 35px;
+				padding: 8px 15px 0;
+				border-radius: 0 !important;
+				font-size: 16px;
+			}
+
+			button {
+				top: 1px;
+				right: 1px;
+				float: right;
+				cursor: pointer;
+				width: 57px;
+				height: 33px;
+				line-height: 34px;
+				background: @cor-destaque-1;
+				border-radius: 0;
+
+				.fa-search {
+
+					&:before {
+						.reset-img();
+						.icon-search();
+					}
+				}
+			}
+			// Resultado
+			#searchsuite-autocomplete {				
+				margin: 0;
+				top: 36px;
+				right: 0;
+				left: initial;
+				width: 100%;
+				min-width: 300px;
+				border-radius: 3px;
+
+				@media @celular-420 {
+					left: 0;
+					right: initial;
+				}
+
+				.product {
+					.title {
+						display: none;
+					}
+				}
+
+				#product {
+					padding: 0;
+					height: 290px;
+					overflow: auto;
+
+					li {
+						padding: 15px;
+						display: flex;
+						align-items: flex-start;
+						justify-content: center;
+
+						.qs-option-image {
+							width: 100%;
+							max-width: 100px;
+							border: 1px solid #cfcfcf;
+
+							img {
+								max-width: 100%;
+							}
+						}
+						.qs-option-info {
+							width: 100%;
+							padding: 0 0 0 15px;
+							margin: 0;
+
+							.qs-option-title {
+								min-height: 35px;
+								line-height: 12px;
+
+								a {
+									font-size: 12px;
+									text-decoration: none;
+									.fonte3();
+									text-transform: uppercase;
+									color: #6d6e72;
+								}
+							}
+
+							.qs-option-price {
+								margin: 0;
+								
+								.price-box {
+
+									.iw3-label.metro {
+										color: #333;
+										font-weight: 400;
+										font-size: 12px;
+									}
+
+									.price {
+										.preco-geral();
+										font-size: 17px;
+									}
+
+									.special-price {
+										.price {
+											.preco-geral();
+										}
+									}
+
+									.old-price {
+										.price {
+											.preco-promo();
+										}
+									}
+								}
+							}
+
+							.qs-option-addtocart {
+								width: 100%;
+
+								.action.tocart {
+									.btn-primario();
+									display: block;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		@media @celular-620 {
+			width: 100%;
+		}
+	}
+
+	@media @desktop-1199 {
+		float: right;
+	}
+
+	@media @celular-620 {
+		width: ~"calc(100% - 51px)";
+	}
+}

@@ -1,0 +1,152 @@
+.cms-como-instalar {
+	.page.messages {
+		display: none;
+	}
+	.column.main {
+		.banner {
+			width: 100%;
+
+			@media @desktop-1200 {
+				height: 300px;
+				overflow: hidden;
+			}
+
+			img {
+				width: 100%;
+				max-width: 100%;
+			}
+		}
+		> .title {
+			color: #333;
+			.fonte5();
+			margin: 40px 0 30px;
+		}
+		.box-videos {
+			margin: 0 -15px;
+			.it {
+				padding: 0 15px;
+				width: 33.33%;
+				float: left;
+				cursor: pointer;
+				margin-bottom: 25px;
+
+				@media @celular-590 {
+					width: 50%;
+				}
+				@media @celular-420 {
+					width: 100%;
+				}
+
+				&:hover,
+				&:focus {
+					.box-img {
+						&:before {
+							opacity: 1;
+						}
+					}
+				}
+
+				.box-img {
+					position: relative;
+					&:before {
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						margin-left: -22.5px;
+						margin-top: -14.5px;
+						content: '\f04b';
+						display: inline-block;
+						font: normal normal normal 14px/1 FontAwesome;
+						font-size: inherit;
+						text-rendering: auto;
+						-webkit-font-smoothing: antialiased;
+						-moz-osx-font-smoothing: grayscale;
+						background-color: #f00;
+						color: #fff;
+						padding: 5px 15px;
+						border-radius: 7px;
+						font-size: 19px;
+						opacity: 0;
+						.transicao();
+
+						@media @tablet-767 {
+							opacity: 1 !important;
+						}
+					}
+
+					img {
+						width: 100%;
+						max-width: 100%;
+					}
+				}
+				.title {
+					.fonte4();
+					color: #333;
+					text-align: center;
+					display: block;
+					padding: 10px 0;
+
+					@media @tablet-767 {
+						min-height: 60px;
+					}
+				}
+
+				.video {
+					display: none;
+					position: fixed;
+					top: 0;
+					left: 0;
+					background: rgba(0,0,0,0.9);
+					width: 100%;
+					height: 100%;
+					z-index: 9998;
+
+					.interna {
+						height: 100%;
+						.center-elements();
+						.vid {
+							position: relative;
+
+							#close {
+								position: absolute;
+								color: #fff;
+								font-size: 30px;
+								padding: 0 11px;
+								border: 3px solid;
+								border-radius: 50%;
+								top: -50px;
+								right: -50px;
+								.transicao();
+
+								@media @tablet-680 {
+									font-size: 20px;
+									padding: 0 7.5px;
+									top: -30px;
+									right: -40px;
+								}
+								@media @celular-380 {
+									right: 0;
+								}
+
+								&:hover,
+								&:focus {
+									opacity: 0.6;
+								}
+							}
+							iframe {
+								@media @tablet-680 {
+									width: 420px;
+									height: 235px;
+								}
+								@media @celular-540 {
+									width: 100%;
+									height: 100%;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

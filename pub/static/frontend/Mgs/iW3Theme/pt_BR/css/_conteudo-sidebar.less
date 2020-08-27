@@ -1,0 +1,160 @@
+.sidebar {
+	// Titulos
+	.block-title {
+		text-transform: capitalize;
+		border-bottom: 1px solid @cor-neutra-1;
+		padding-bottom: 0;
+		margin-bottom: 15px; 
+
+		.title {
+			font-size: 18px;
+			font-weight: normal;
+			margin: 0;
+			.fonte4();
+		}
+	}
+
+	// Links Minha Conta
+	.account-nav {
+		.account-nav {
+			.items {
+				.item {
+					a,
+					strong {
+						.links-sidebar();
+						padding-bottom: 10px;
+						padding-right: 0;
+					}
+
+					a {
+						> strong {
+							padding-left: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	// Filtros
+	.filter {
+
+		// Aplicados
+		.filter-current {
+			border: 1px solid @cor-neutra-2;
+			padding: 10px;
+
+			.block-subtitle {
+				.fonte4();
+				font-weight: normal;
+				padding: 0 0 5px;
+				margin: 0 0 5px;
+				border-bottom: 1px solid @cor-neutra-2;
+				width: 100%;
+				display: block;
+			}
+
+			ol.items {
+				.item {
+					border-bottom: 1px dashed @cor-neutra-2;
+					width: 100%;
+					clear: both;
+					padding: 0 0 5px;
+					margin: 0 0 5px;
+					.fonte4();
+
+					&:last-child {
+						border-bottom: 0;
+						margin: 0;
+						padding: 0;
+					}
+
+					.filter-label {
+						.fonte3();
+						&:after {
+							content: ":";
+						}						
+					}
+
+					.action.remove {
+						display: inline-block;
+						font-size: 0;
+						float: right;
+						line-height: 17px;
+						text-decoration: none;
+
+						&:before {
+							content: "x";
+							font-size: 15px;
+							color: #FF0000;
+						}
+					}
+				}
+			}
+		}
+		.filter-actions {
+			margin: 15px 0;
+
+			// Btn Remover Todos
+			a {
+				display: block;
+				.btn-secundario();
+				width: 120px;
+				height: auto;
+				padding: 5px 0;
+				font-size: 12px;
+				text-decoration: none;
+			}
+		}
+		// Opcoes
+		.filter-subtitle {
+			display: none;
+		}
+		.filter-options {
+			.filter-options-item {
+				border-color: @cor-neutra-1;
+
+				.filter-options-title {
+					.links-sidebar();
+
+					@media @tablet-991 {
+						&:after {
+							top: 5px;
+						}
+					}
+				}
+				.filter-options-content {
+					.items {
+						.item {
+							a {
+								.fonte4();			
+								.count {
+									display: none;
+								}				
+							}
+						}
+					}
+					.swatch-attribute {
+						.swatch-attribute-options {
+							.swatch-option {
+								height: 30px;
+								width: 30px;
+								text-align: center;
+								border: 1px solid @cor-neutra-1;
+								background: #FFF;
+								color: @cor-neutra-1;
+								transition: all 0.4s;
+
+								&:hover {
+									border-color: #000 !important;
+    								outline: 1px solid #000;
+									.shadow();
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

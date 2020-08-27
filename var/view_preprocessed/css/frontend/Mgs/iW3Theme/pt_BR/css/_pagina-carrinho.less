@@ -1,0 +1,349 @@
+.checkout-cart-index {
+	.page.messages {
+		.message-success {
+			display: none;
+		}
+	}
+}
+// Review de Produtos
+.cart-container {
+	#form-validate {	
+		width: 100%;
+		padding: 0;
+
+		#shopping-cart-table {
+
+			// Cabecalho
+			thead {
+				tr {
+					th {
+						.padrao-th();
+					}
+				}
+			}
+
+			// Itens
+			.item-info {
+				td {
+					.padrao-td();
+					padding: 0;
+
+					&.item {
+						// Nome
+						.product-item-details {
+							vertical-align: middle;
+							padding-bottom: 0;
+							padding-top: 8px;
+
+							@media @tablet-767 {
+								width: 100%;
+								padding: 25px 0 25px 110px;
+							}
+
+							strong {
+								margin: 0;
+
+								a {
+									.fonte3();
+									text-transform: uppercase;
+									color: @cor-neutra-1;
+									font-size: 19px;
+									text-decoration: none;
+								}
+							}
+						}
+					}
+
+					// Preco
+					&.price {
+						.price {
+							.preco-geral();
+							font-size: 18px;
+						}
+					}
+
+					// Qtd
+					.qty {
+						#plus,#minus {
+							height: 24px;
+							border: 1px solid #777777;
+							background-color: #fff;
+							margin: 5px 2px;
+							width: 12px;
+							border-radius: 2px;
+						}
+						input {
+							float: left;
+						}
+						.control {
+							.qty {
+								.estilos-campos();
+								padding: 5px;
+								width: 65px;
+
+							}
+							#increment-info {
+								color: #f00;
+							}
+						}
+					}
+
+					// Subtotal
+					&.subtotal {
+						.price {
+							.preco-geral();
+							font-size: 18px;
+						}
+					}
+				}
+			}
+
+			// Acoes
+			.item-actions {
+				.actions-toolbar {
+					padding-bottom: 0;
+					min-height: 0;
+
+					a {	
+						position: absolute;
+						top: -25px;
+
+						@media @celular-480 {
+							right: -15px;
+
+							&.action-edit {
+								top: -55px;
+								margin-right: 0;
+							}
+						}
+					}
+
+					// Adc aos Favoritos
+					.action-towishlist {
+						display: block;
+						.btn-neutro();
+						padding: 5px 0;
+						margin: 0;
+						height: 40px;
+						width: 40px;
+						line-height: 28px;
+						border-radius: 0.5em !important;
+						font-size: 0;
+
+						&:before {
+							.reset-img();
+							.icon-coracao();
+							padding: 16px 18px;
+						}
+					}
+				}
+			}
+			a.use-ajax.action.action-towishlist {
+				display: none;
+			}
+		}
+
+		// Acoes
+		.cart.main.actions {
+			margin: 30px 0;
+			display: none;
+
+			// Btn Continuar Comprando
+			.btn.continue,
+			// Btn Atualizar Valores
+			.btn.update {
+				.btn-secundario();
+			}
+
+			// Btn Limpar Tudo
+			.btn.clear {
+				display: none;
+			}
+
+		}
+	}
+}
+
+.shopping-cart-bottom {
+	> .col-lg-8 {
+		padding: 0;
+		.clear-elements();
+		background: #fdfdfd;
+		padding: 20px;
+	}
+	> .col-lg-4 {
+		padding: 0;
+		.clear-elements();
+	}
+
+	@media @celular-480 {
+		> div {
+			.clear-elements();
+			padding: 15px !important;
+		}
+	}
+
+	// Extras
+	.checkout-extra {
+		> div {
+			float: left;
+			width: 50%;
+			padding-right: 30px;
+
+			@media @celular-480 {
+				.clear-elements();
+			}
+
+			.title {
+				outline: none;
+				padding: 0 0 20px;
+
+				strong {
+					.fonte4();
+					font-size: 20px;
+					text-transform: capitalize;
+					font-weight: normal;
+				}
+			}
+
+			legend,
+			.note,
+			br {
+				display: none;
+			}
+
+			> .content {
+				display: block !important;
+
+				input,
+				select {
+					.estilos-campos();
+				}
+
+				.action {
+					.btn-secundario();
+					width: auto;
+				}
+
+				#shipping-zip-form {
+					.field {
+						.label {
+							span {
+								font-size: 0;
+								display: inline-block;
+
+								&:before {
+									content: 'CEP do local de entrega';
+									display: block;
+									font-size: 14px;
+									color: #fe0000;
+									font-weight: 600;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+	// Resumo Precos
+	#cart-totals {
+		margin: 30px 0 0;
+		
+		.totals {
+			tbody {
+				tr {
+					th,
+					td {
+						vertical-align: middle;
+						padding: 20px;
+						border: 1px solid @cor-neutra-2;
+						.fonte5();
+						font-size: 16px;
+						font-weight: normal;
+						span {
+							.fonte5();
+							font-size: 16px;
+							font-weight: normal;						
+						}
+					}
+					th {
+						text-align: right;
+						border-right: 0;
+					}
+					td {
+						text-align: right;
+						border-left: 0;
+					}
+
+					&.grand.totals {
+						th,
+						td,
+						td span {
+							font-size: 20px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	// Btn Checkout
+	.cart-summary {
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		background: transparent;
+
+		.summary.title {
+			display: none !important;
+		}
+
+		.checkout.methods {
+			.action.checkout {
+				.btn-primario();
+				float: right;
+
+				@media @celular-620 {
+					max-width: 100%;
+				}
+			}
+		}
+	}
+}
+.minicart-items {
+	.product-item {
+		padding: 0 15px 20px 0;
+	}
+}
+
+[name$="shippingAddress.country_id"] {
+	display: none !important;
+}
+.field.country.required {
+	display: none !important;
+}
+
+
+form#shipping-zip-form {
+	[name$="shippingAddress.region_id"] {
+		display: none !important;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

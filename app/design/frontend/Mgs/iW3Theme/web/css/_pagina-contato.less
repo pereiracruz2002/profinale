@@ -1,0 +1,271 @@
+.contact-index-index {
+	.breadcrumb {
+		margin: 20px 0 15px;
+	}
+	// Titulo da Página
+	.page-title-wrapper {
+		display: none;
+	}
+
+
+	#maincontent {
+		> .row {
+			> .column {
+
+				@media @tablet-767 {
+					display: flex;
+					flex-direction: column-reverse;
+				}
+			}
+		}
+	}
+
+
+	// Mapa de Links
+	#links-map {
+		float: left;
+		background-color: #f1f1f1;
+		padding: 52px 30px;
+		width: 100%;
+		max-width: 320px;
+		margin: 0 30px 0 0;
+
+		> div {
+			.clear-elements();
+
+			&.box-links {
+				border-bottom: 1px solid #cfcfcf;
+				padding: 0 0 18px;
+
+				ul {
+					li {
+						margin: 0 0 18px;
+
+						a {
+							.btn-secundario();
+							border-radius: 5px;
+							background: transparent;
+							border-color: #000;
+							display: block;
+							color: #000;
+						}
+					}
+				}
+			}
+
+			&.box-atendimento {
+				padding: 28px 0 0;
+
+				.title {
+					.fonte3();
+					margin: 0 0 30px;
+					font-size: 18px;
+					line-height: 23px;
+					color: #363636;
+				}
+
+				.item {
+					display: block;
+					font-size: 15px;
+					margin: 0 0 5px;
+					.fonte4();
+					color: #666;
+					text-decoration: none;
+
+					@media @desktop-1199-992 {
+						font-size: 15px;
+					}
+
+					&:nth-child(2) {
+						&:before {
+							.reset-img();
+							.icon-phone();
+							filter: invert(1);
+							display: inline-block;
+							vertical-align: middle;
+							margin-right: 3px;
+						}
+					}
+
+					&:nth-child(3) {
+						.fa-whatsapp {
+							font-size: 17px;
+							vertical-align: middle;
+							margin-right: 3px;
+							width: 24px;
+							text-align: center;
+						}
+						&:hover {
+							color: #6d6e72;
+						}
+					}
+					&:nth-child(4) {
+						.fa-envelope {
+							font-size: 17px;
+							vertical-align: middle;
+							margin-right: 3px;
+							width: 24px;
+							text-align: center;
+						}
+					}
+
+
+					&.tel,
+					&.email {
+						&:hover,
+						&:focus {
+							color: #000;
+						}
+
+						@media @desktop-1199-992 {
+							font-size: 11px;
+						}
+					}
+
+					&.endereco {
+						font-size: 13px;
+						margin-top: 15px;
+						line-height: 15px;
+
+						@media @desktop-1199-992 {
+							font-size: 11px;
+						}
+
+						.quebra {
+							display: block;
+						}
+					}
+
+
+					img {
+						display: inline-block;
+						max-width: 100%;
+					}
+
+					span {
+						display: inline-block;
+					}
+				}
+
+			}
+		}
+
+		@media @tablet-767 {
+			width: 100%;
+			padding: 35px;
+			margin: 35px 0 0;
+		}
+
+		@media @tablet-767 {
+			width: 100%;
+			max-width: 100%;
+		}
+
+		@media @celular-580 {
+			padding: 35px 15px 35px;
+
+			> div {
+				&.box-links {		    		
+					width: 100%;
+					border-bottom: 1px solid #cfcfcf;
+				}
+
+				&.box-atendimento {
+					width: 100%;
+					clear: both;
+					padding: 20px 0 0;
+				}
+			}
+		}
+	}
+
+
+	// Formulario
+	.contact-form-content {
+		float: left !important;
+		width: ~'calc(100% - 350px)';
+		border: 1px solid #e2e2e2;
+		border-radius: 4px;
+		padding: 30px;
+
+		@media @tablet-767 {
+			width: 100%;
+		}
+		@media @celular-420 {
+			padding: 30px 15px;
+		}
+
+		#content-title-form {
+			.title {
+				.fonte3();
+				color: @cor-destaque-1;
+				font-size: 25px;
+
+				@media @celular-420 {
+					font-size: 18px;
+				}
+			}
+
+			.text {
+				.fonte4();
+				color: #333;
+			}
+		}
+
+		.form.contact,
+		#form-envio-email {
+			width: 100% !important;
+
+
+			.row > div {
+				.clear-elements();
+			}
+
+			.form-group {
+				.clear-elements();
+
+				label {
+					.label();
+					padding-top: 7px !important;
+					width: 100%;
+					text-align: left;
+					padding: 0;
+					.fonte4();
+					font-size: 16px;
+					font-weight: initial;
+				}
+
+				input,
+				textarea {
+					.estilos-campos();
+					.fonte4();
+					width: 450px !important;
+
+					&:hover,
+					&:focus {
+						border-color: @cor-destaque-1;
+					}
+				}
+				textarea {
+					transition: initial;
+				}
+				input {
+					height: 42px;
+
+				}
+
+				a {
+					.btn-primario();
+					margin-top: 15px;
+					display: block;
+				}
+			}
+
+			.actions-toolbar {
+				button {
+					.btn-primario();
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ * Desenvolvido por Jamacio Rocha
+ */
+-->
+<body>
+    <referenceContainer name="order.success.additional.info">
+        <block class="IW3\Productsucesspage\Block\Success"
+               name="IW3.order.success"
+               template="IW3_Productsucesspage::order/success.phtml"
+               after="-">
+        </block>
+    </referenceContainer>
+</body>

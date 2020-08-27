@@ -1,0 +1,412 @@
+<?php $themeHelper = $this->helper('MGS\Mpanel\Helper\Data'); ?>
+<?php if($themeHelper->getStoreConfig('mgstheme/general/sticky_menu')): ?>
+	<script type="text/javascript">
+		require([
+			'jquery'
+		], function(jQuery){
+			(function($) {
+				var height_header = $('.header').height() + $('.megamenu-content').height();
+				var check_height = $(window).height();
+				var body_height = $('body').height() - 250 -  height_header;
+				if(body_height > check_height){
+					$(window).scroll(function(){
+						if($(this).scrollTop() > 200 & $(this).width() > 991){
+							$('#placeholder-header').height(height_header);
+							$('#placeholder-header').show();
+							$('.header').addClass('active-sticky');
+						}else {
+							$('.header').removeClass('active-sticky');
+							$('#placeholder-header').hide();
+						}
+					});
+					$(window).resize(function() {
+						if($(this).width() < 992){
+							$('.header').removeClass('active-sticky');
+							$('#placeholder-header').hide();
+						}
+					});
+				}
+			})(jQuery);
+		});
+	</script>
+<?php endif ?>
+<?php if($themeHelper->getStoreConfig('mgstheme/general/back_to_top')): ?>
+	<a href="" class="scroll-to-top"><i class="fa fa-arrow-up"></i></a>
+	<script type="text/javascript">
+		require([
+			'jquery'
+		], function(jQuery){
+			(function($) {
+				$(window).scroll(function(){
+					if ($(this).scrollTop() > 1) {
+						$('.scroll-to-top').css({bottom:"25px"});
+					} else {
+						$('.scroll-to-top').css({bottom:"-100px"});
+					}
+				});
+
+				$('.scroll-to-top').click(function(){
+					$('html, body').animate({scrollTop: '0px'}, 800);
+					return false;
+				});
+			})(jQuery);
+		});
+	</script>
+<?php endif ?>
+
+<?php if (!$themeHelper->getStoreConfig('checkout/cart/redirect_to_cart')) : ?>
+	<script type="text/x-magento-init">
+	{
+		"[data-role=tocart-form], .form.map.checkout": {
+			"catalogAddToCart": {}
+		}
+	}
+	</script>
+<?php endif; ?>
+<style>.payment-method-billing-address {  display: none !important;  }  .field.no-label.year {  width: 20%;  float: left;  margin-right: 5px;  margin-bottom: 16px;  }  .field.no-label.month {  width: 20%;  float: left;  margin-right: 5px;  margin-bottom: 16px;  }  .checkout-agreements-block {  margin-bottom: 12px;  }</style>
+
+<style>.panel-block-row.col-md-12.box-banner.animated.appear-animation.fadeInRight .owl-stage-outer {cursor: pointer;}</style>
+<input type="hidden" id="regiao-uf2">
+
+
+<!--Start of Zendesk Chat Script-->
+<script type="text/javascript">
+	window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+		d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+		_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
+		$.src="https://v2.zopim.com/?5qKP4TC35FvQ4DgDTVcV8kS5UGNMZm0P";z.t=+new Date;$.
+			type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
+</script>
+<!--End of Zendesk Chat Script-->
+
+
+<?php
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$cart = $objectManager->get('\Magento\Checkout\Model\Session');
+$customerSession = $objectManager->get('Magento\Customer\Model\Session');
+$currentTaxVat = '';
+if($customerSession->isLoggedIn()) {
+	$currentTaxVat = $customerSession->getCustomer()->getTaxvat();
+}
+
+
+?>
+<script>
+	function inserirMinicart(){
+		var inputObj;
+	if(inputObj = document.querySelector('.block.items-in-cart strong > span[data-bind*="text: getItemsQty()"]'))
+		inputObj.innerHTML = "<?=count($cart->getQuote()->getAllVisibleItems())?>";
+
+	}
+</script>
+
+
+<script>
+	
+	(function() {
+		const send = XMLHttpRequest.prototype.send;
+		XMLHttpRequest.prototype.send = function() {
+			this.addEventListener('load', function() {
+				inserirMinicart();
+				loadScriptIw3();
+				inserirTaxVatCustomer();
+
+			});
+			return send.apply(this, arguments)
+		}
+	})();
+
+	function inserirTaxVatCustomer(){
+		var debit_online,boleto,creditCardDocument,CurrentTaxVat = "<?=$currentTaxVat?>";
+		if(debit_online = document.querySelector('input#pagseguro_online_debit_online_debit_document'))
+			debit_online.value = CurrentTaxVat;
+
+		if(boleto = document.querySelector('input#pagseguro_boleto_boleto_document'))
+			boleto.value = CurrentTaxVat;
+
+		if(creditCardDocument = document.querySelector('input#creditCardDocument'))
+			creditCardDocument.value = CurrentTaxVat;
+
+	}
+	function inserirTracoComplemento (){
+
+		var divsToHide = document.querySelectorAll('[name*="street[2]"]');
+		for(var i = 0; i < divsToHide.length; i++){
+			if(divsToHide[i].value == "")
+				divsToHide[i].value = '...';
+			jQuery(divsToHide[i]).trigger('keyup');
+		}
+	}
+
+
+	function loadScriptIw3() {
+
+
+
+
+		var proximoPasso,salvarendereco,objFinal,celular,telefone;
+		if(objFinal = document.querySelector('[name*="shippingAddress.postcode"] input')){
+
+			var valorchange = objFinal.value;
+			jQuery(objFinal).val( "" );
+			jQuery(objFinal).trigger('change');
+			jQuery(objFinal).val( valorchange );
+			jQuery(objFinal).trigger('change');
+
+
+
+			objFinal.onchange = function () {
+
+				if(objFinal.value)
+					pesquisacep(objFinal.value);
+
+			};
+
+			objFinal.onkeyup = function () {
+				this.value = this.value.replace(/[^\d]+/g,'');
+			};
+		}
+
+		if(salvarendereco = document.querySelector('.action.primary.action-save-address')) {
+			salvarendereco.onclick = function() {
+				inserirTracoComplemento();
+			};
+		}
+
+		if(proximoPasso = document.querySelector('div#shipping-method-buttons-container')) {
+			proximoPasso.onclick = function() {
+				inserirTracoComplemento();
+			};
+		}
+
+		celular = document.querySelector('[name*="shippingAddress.fax"] [name*="fax"]');
+		telefone = document.querySelector('[name*="shippingAddress.telephone"] [name*="telephone"]');
+
+		if(celular && telefone) {
+			celular.onkeyup = function () {
+				this.value = mascaraTel(this.value);
+			};
+			telefone.onkeyup = function () {
+				this.value = mascaraTel(this.value);
+			};
+
+			telefone.setAttribute("maxlength", "15");
+			celular.setAttribute("maxlength", "15");
+		}
+	}
+
+
+	function limpa_formulario_cep() {
+
+		if(v1 = document.querySelector('[name*="street[0]"]'))
+			v1.value=("");
+
+		if(v2 = document.querySelector('[name*="street[3]"]'))
+			v2.value=("");
+
+		if(v3 = document.querySelector('[name*="shippingAddress.city"] [name*="city"]'))
+			v3.value=("");
+	}
+
+
+	function meu_callback(conteudo) {
+		if (!("erro" in conteudo)) {
+
+			if(v1 = document.querySelector('[name*="street[0]"]')){
+				v1.value=(conteudo.logradouro);
+				jQuery(v1).trigger('keyup');
+			}
+
+			if(v2 = document.querySelector('[name*="street[3]"]')){
+				v2.value=(conteudo.bairro);
+				jQuery(v2).trigger('keyup');
+			}
+
+			if(v3 = document.querySelector('[name*="shippingAddress.city"] [name*="city"]')){
+				v3.value=(conteudo.localidade);
+				jQuery(v3).trigger('keyup');
+			}
+			document.getElementById('regiao-uf2').value=(conteudo.uf);
+			buscarUf2(conteudo.uf);
+
+			jQuery('[name*="region_id"]').trigger('change');
+
+
+
+
+		}
+		else {
+
+			limpa_formulario_cep();
+			alert("CEP não encontrado.");
+		}
+	}
+
+
+	function pesquisacep(cep) {
+
+		if (cep != "") {
+
+
+			var validacep = /^[0-9]{8}$/;
+
+
+			if(validacep.test(cep)) {
+
+				if(v1 = document.querySelector('[name*="street[0]"]'))
+
+
+					if(v2 = document.querySelector('[name*="street[3]"]'))
+
+
+						if(v3 = document.querySelector('[name*="shippingAddress.city"] [name*="city"]'))
+
+
+
+							var script = document.createElement('script');
+
+
+				script.src = '//viacep.com.br/ws/'+ cep + '/json/?callback=meu_callback';
+
+
+				document.body.appendChild(script);
+
+			}
+		}
+		else {
+			limpa_formulario_cep();
+		}
+	}
+
+
+	function buscarUf2(uf){
+		switch(uf) {
+			case "AC":
+				document.querySelector('[name="region_id"]').value = "485";
+				break;
+			case "AL":
+				document.querySelector('[name="region_id"]').value = "486";
+				break;
+			case "AP":
+				document.querySelector('[name="region_id"]').value = "487";
+				break;
+			case "AM":
+				document.querySelector('[name="region_id"]').value = "488";
+				break;
+			case "BA":
+				document.querySelector('[name="region_id"]').value = "489";
+				break;
+			case "CE":
+				document.querySelector('[name="region_id"]').value = "490";
+				break;
+			case "ES":
+				document.querySelector('[name="region_id"]').value = "491";
+				break;
+			case "GO":
+				document.querySelector('[name="region_id"]').value = "492";
+				break;
+			case "MA":
+				document.querySelector('[name="region_id"]').value = "493";
+				break;
+			case "MT":
+				document.querySelector('[name="region_id"]').value = "494";
+				break;
+			case "MS":
+				document.querySelector('[name="region_id"]').value = "495";
+				break;
+			case "MG":
+				document.querySelector('[name="region_id"]').value = "496";
+				break;
+			case "PA":
+				document.querySelector('[name="region_id"]').value = "497";
+				break;
+			case "PB":
+				document.querySelector('[name="region_id"]').value = "498";
+				break;
+			case "PR":
+				document.querySelector('[name="region_id"]').value = "499";
+				break;
+			case "PE":
+				document.querySelector('[name="region_id"]').value = "500";
+				break;
+			case "PI":
+				document.querySelector('[name="region_id"]').value = "501";
+				break;
+			case "RJ":
+				document.querySelector('[name="region_id"]').value = "502";
+				break;
+			case "RN":
+				document.querySelector('[name="region_id"]').value = "503";
+				break;
+			case "RS":
+				document.querySelector('[name="region_id"]').value = "504";
+				break;
+			case "RO":
+				document.querySelector('[name="region_id"]').value = "505";
+				break;
+			case "RR":
+				document.querySelector('[name="region_id"]').value = "506";
+				break;
+			case "SC":
+				document.querySelector('[name="region_id"]').value = "507";
+				break;
+			case "SP":
+				document.querySelector('[name="region_id"]').value = "508";
+				break;
+			case "SE":
+				document.querySelector('[name="region_id"]').value = "509";
+				break;
+			case "TO":
+				document.querySelector('[name="region_id"]').value = "510";
+				break;
+			case "DF":
+				document.querySelector('[name="region_id"]').value = "511";
+				break;
+		}
+	}
+
+
+	function mascaraTel(v){
+		v=v.replace(/\D/g,"");
+		v=v.replace(/^(\d{2})(\d)/g,"($1) $2");
+		v=v.replace(/(\d)(\d{4})$/,"$1-$2");
+		return v;
+	}
+	function mascaraCpf(v){
+		v=v.replace(/\D/g,"")
+		v=v.replace(/(\d{3})(\d)/,"$1.$2")
+		v=v.replace(/(\d{3})(\d)/,"$1.$2")
+
+		v=v.replace(/(\d{3})(\d{1,2})$/,"$1-$2")
+		return v
+	}
+
+
+</script>
+
+
+
+<?php
+
+
+
+//$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+//$cart = $objectManager->get('\Magento\Checkout\Model\Session');
+//$itemsVisible = $cart->getQuote()->getAllVisibleItems();
+//
+//$qttyProd = '';
+//foreach($itemsVisible as $item) {
+//	$_atributo = $objectManager->get('Magento\Catalog\Model\Product')->load($item->getId());
+//	$qtyIncremet = $_atributo->getData('incrementar_decimal');
+//	$qttyProd =   ($item->getQty() * str_replace(',','.',$qtyIncremet));
+//	$totalCart = ($qttyProd * $item->getPrice());
+//
+//	$item->setCustomPrice($totalCart);
+//	$item->setOriginalCustomPrice($totalCart);
+//	$item->getProduct()->setIsSuperMode(true);
+//	$item->save();
+//}
+//
+//echo $qttyProd;
+
+?>

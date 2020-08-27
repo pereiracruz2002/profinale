@@ -1,0 +1,7 @@
+<?php
+/**
+ * @var $block \JSR\TagHead\Block\TagHead
+ */
+?>
+<?php $urlAtual = \Magento\Framework\App\ObjectManager::getInstance()->get('Magento\Framework\UrlInterface')->getCurrentUrl(); ?>
+<link rel="canonical" href="<?=$urlAtual?>" />

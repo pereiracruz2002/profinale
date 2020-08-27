@@ -1,0 +1,51 @@
+@color_1: #fff;
+@background_color_1: #fff;
+@background_color_2: #d72b1b;
+@border_color_1: #d02e04;
+
+.iw3-modal-consultar-cep {
+	position: fixed;
+	top: 130px;
+	display: table-column-group;
+	width: 400px;
+	float: none;
+	left: 50%;
+	margin-left: -200px;
+	z-index: 999;
+	background-color: @background_color_1;
+	padding: 20px;
+	box-shadow: 0 0 20px 8px;
+	text-align: center;
+	border-radius: 15px;
+	input {
+		width: 225px;
+		border-bottom-left-radius: 15px;
+		border-top-left-radius: 15px;
+		border-color: @border_color_1;
+	}
+	button {
+		background-color: @cor-destaque-1;
+		border: none;
+		color: @color_1;
+		padding: 6px;
+		border-bottom-right-radius: 15px;
+		border-top-right-radius: 15px;
+	}
+}
+#fechar-modal-cep {
+	top: 0px;
+	position: absolute;
+	right: 10px;
+	font-size: 23px;
+	font-weight: bold;
+}
+div#retorno-ajax-cep {
+	text-align: left;
+	margin: 18px 0 0 46px;
+}
+.iw3-msg-buscar-cep {
+	margin: 5px 46px;
+	text-align: left;
+	font-size: 16px;
+}
+

@@ -1,0 +1,221 @@
+.products-grid {
+	.item {
+		padding: 0 7.5px 15px;
+		margin: 0 0 40px;
+		/* border: 1px solid #F3f3f3; */
+		position: relative;
+
+		@media @celular-480 {
+			width: 100%;
+		}
+
+		.product-item-info {
+			margin-bottom: 0;
+
+			&:hover {
+				.product-top {
+					.product-label {
+						display: block !important;
+					}
+				}
+			}
+
+			.product-top {
+
+				@media @tablet-767 {
+					overflow: hidden;
+				}
+
+				// Btns de Apoio (Quick View e Favoritos)
+				.actions-link {
+					top: inherit;
+					bottom: 0;
+					right: 0;
+					.transicao();
+					width: 100%;
+					padding: 15px;
+
+					li {
+						display: inline-block;
+						padding: 0;
+						margin: 0;
+						justify-content: inherit;
+						align-items: inherit;
+						float: right;
+						margin-left: 15px;
+
+						// Caixa de Apoio
+						.action {
+							.btn-neutro();
+
+							&:before,
+							&:after {
+								display: none !important;
+							}
+						}
+
+						// Comparar
+						.tocompare {
+							display: none;
+						}
+
+						// Favoritos
+						.towishlist {
+							position: relative;
+							top: 1px;
+						}
+					}
+				}
+			}
+
+			.product.details {
+				padding: 15px 15px 0;
+
+				@media @tablet-991-768 {
+					padding: 15px 5px 0;
+				}
+
+				// Nome
+				.product.name {
+					min-height: 55px;
+					margin: 0 0 5px;
+					font-size: initial;
+
+					@media @tablet-991-768 {
+						min-height: 70px;
+						a {
+							font-size: 15px;
+						}
+					}
+
+					@media @tablet-767 {
+						min-height: 60px;
+					}
+
+					@media @celular-480 {
+						min-height: 50px;
+					}
+					.sku-iw3 {
+						.fonte3();
+						text-transform: uppercase;
+						color: @cor-neutra-1;
+						font-size: 16px;
+					}
+				}
+				.listagem {
+					white-space: initial;
+					width: 100%;
+					min-height: 90px;
+
+					p {
+						margin: 0;
+					}
+
+					@media @tablet-991-768 {
+						min-height: 120px;
+					}
+				}
+				.product-reviews-summary {
+					display: none;
+				}
+
+				// Preco
+				.price-box {
+					clear: both;
+					width: 100%;
+					float: left;
+					height: 65px;
+					position: relative;
+
+					&:after {
+						content: 'à vista ou em até 12x com juros a assumir';
+						display: block;
+						font-size: 12px;
+						.fonte4();
+						color: #666;
+
+						@media @desktop-1199-768,
+						@celular-580-481 {
+							font-size: 10px;
+						}
+					}
+
+					.price {
+						@media @tablet-991-768,
+						@celular-580-481 {
+							font-size: 20px;
+						}
+					}
+
+					.special-price {
+						display: inline-block;
+						padding-top: 15px;
+					}
+
+					.old-price {
+						position: absolute;
+						top: 0;
+						left: 0;
+						color: #bebebe;
+						font-size: 12px;
+						margin-right: 5px;
+
+						&:before {
+							content: '';
+							width: 100%;
+							height: 1px;
+							background-color: #bebebe;
+							position: absolute;
+							top: 8px;
+							left: 0;
+						}
+
+						.price-label {
+							display: inline-block;
+							margin-right: 2px;
+						}
+
+						@media @tablet-991-768 {
+							height: 15px !important;
+							line-height: 20px !important;
+						}
+
+						.price {
+							color: #bebebe;
+							font-size: 14px;
+							@media @tablet-991-768 {
+								font-size: 13px;
+							}
+						}
+					}
+				}
+
+				// Btn Comprar
+				.product-item-inner {
+					clear: both;
+
+					.actions-primary {
+
+						// Btn Comprar
+						.tocart {
+							@media @desktop-1199 {
+								font-size: 12px;
+								width: 100px;
+							}
+
+							@media @tablet-767 {
+								width: auto;
+								font-size: 17px;
+								min-width: 180px;
+							}
+
+						}
+					}
+					.actions-link {
+						display: none !important;
+					}
+				}
+			}
+		}
+	}
+}

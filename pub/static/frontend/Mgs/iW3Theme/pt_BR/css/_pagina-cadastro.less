@@ -1,0 +1,406 @@
+.tamanho-elementos {
+	width: 100%;
+	max-width: 600px;
+	padding: 20px 80px;
+	background: #FFF;
+	margin: 0 auto;
+
+	@media @celular-620 {
+		width: 100%;
+		max-width: 100%;
+	}
+
+	@media @celular-580 {
+		padding: 20px 40px;
+	}
+
+	@media @celular-480 {
+		padding: 20px 0;
+	}
+}
+
+.customer-account-create {
+	background-color: #cfcfcf;
+
+	@media @tablet-767 {
+		background-image: none;
+	}
+
+	@media @celular-620 {
+		background-color: #FFF;
+	}
+
+	.header,
+	.footer,
+	.breadcrumbs {
+		display: none;
+	}
+
+	.page-title-wrapper {
+		.page-header {
+			display: none;
+		}
+	}
+
+	.main {
+		height: 100vh;
+	}
+
+	.box-boas-vindas {
+		.tamanho-elementos();
+
+		.logo {
+			margin: 20px 0 35px;
+
+			img {
+				display: block;
+				margin: 0 auto;
+			}
+		}
+
+		.box-txt {
+			.title {
+				.login-title() 
+			}
+
+			.sub-title {
+				.login-sub-title();
+			}
+		}		
+	}
+
+	.nav-tabs {
+		.tamanho-elementos();
+		display: flex;
+		align-items: center;
+		border: 0;
+		overflow: hidden;
+		padding-top: 10px !important;
+		padding-bottom: 0 !important;
+
+		.item {
+			float: none;
+			background: transparent;
+			color: #FFF;
+			position: relative;
+			display: inline-block;
+			border: 0;
+			border-bottom: 1px solid transparent;
+			font-family: 'robotomedium';
+			font-size: 16px;
+			margin: 0;
+			width: 100%;
+			max-width: 290px;
+			text-align: center;
+
+			&:before {
+				border: 29px solid transparent;
+				border-left-color: #FFF;
+				content: "";
+				top: -8px;
+				left: initial;
+				right: -58px;
+				position: absolute;
+				z-index: 8;
+			}
+
+			a {
+				display: flex;
+				align-items: center;
+				flex-direction: row-reverse;
+				justify-content: center;
+				padding: 10px 0;
+				margin: 0;
+				background: #f3f3f3;
+				font-size: 16px;
+				font-family: "Arial";
+				color: #000;
+				cursor: default;
+				border-radius: 0;
+				border: 0;
+				transition: all 0.3s;
+
+				&:after {
+					height: auto;
+					position: relative;
+					top: 0;
+					left: 0;
+					margin: 0 10px 0 0;
+					padding: 0;
+					background: transparent;
+					border-radius: 0;
+					font-family: 'FontAwesome';
+					transition: all 0.3s;
+				}
+
+				&:before {
+					border: 21px solid transparent;
+					border-left-color: #f3f3f3;
+					content: "";
+					top: 0;
+					left: initial;
+					right: -42px;
+					position: absolute;
+					height: auto;
+					width: auto;
+					margin-left: 0;
+					border-radius: 0;
+					background: transparent;
+					z-index: 9;
+					transition: all 0.3s;
+				}
+
+				&.informacoes-pessoais {
+					&:after {
+						content: "\f007";
+					}
+				}
+
+				&.informacoes-endereco {
+					&:after {
+						content: "\f015";
+					}
+				}
+
+				&.informacoes-acesso {
+					&:after {
+						content: "\f1fa";
+					}
+				}
+			}
+
+			&[active] {
+				a {
+					background: #000;
+					color: #FFF;
+
+					&:before {
+						border-left-color: #000;
+					}
+				}
+			}
+
+			&[complete] {
+				a {
+					&:after {
+						content: "\f00c";
+					}
+				}
+			}
+
+			@media @celular-520 {
+
+				&:before {
+					border: 27px solid transparent;
+					border-left-color: #FFF;
+					right: -54px;
+				}
+
+				a {
+					font-size: 12px;
+
+					&:before {
+						right: -36px;
+						border: 18px solid transparent;
+						border-left-color: #f3f3f3;
+					}
+
+					&:after {
+						display: none
+					}
+				}
+			}
+
+			@media @celular-360 {
+				a {
+					font-size: 10px;
+					padding-left: 8px;
+				}
+			}		    
+		}
+	}
+
+	.form-create-account {
+		width: 100% !important;
+		background: #FFF;
+		.tamanho-elementos();
+
+		@media @altura-max-599 {
+			height: auto;
+		}
+
+		.tab-pane {
+			display: flex;
+			justify-content: center;
+		}
+
+		.fieldset {
+			width: 100%;
+
+			.legend {
+				display: none;
+			}
+
+			.label {
+				.label();
+			}
+			.date {
+				.customer-dob {
+					display: flex;
+					align-items: center;
+
+					button {
+						font-size: 0;
+						.reset-img();
+						.icon-calendario();
+						background-color: transparent;
+						border: 0;
+						padding: 16px;
+						margin-left: 10px;
+					}
+				}
+			}
+			select,
+			input {
+				.estilos-campos();
+				position: relative;
+				z-index: 2;
+				background: transparent;
+			}
+
+			input[type="checkbox"] {
+				.estilos-check();
+			}
+
+			.field {
+				position: relative;
+
+				.mage-error {
+					border: 1px dashed red;
+
+					~ div.mage-error {
+						display: none !important;
+					}
+				}
+
+				#msg-validacao-iw3 {
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					font-size: 9px;					
+				}
+
+				#password-strength-meter-container {
+					position: absolute;
+					bottom: -7px;
+					left: 0;
+					right: 0;
+					font-size: 9px;
+					width: 100%;
+					height: 6px;
+					text-align: right;
+					z-index: 1;
+					border-radius: 3px;
+					display: flex;
+					align-items: flex-end;
+					transition: all 0.3s;
+					border-radius: 0;
+
+					#password-strength-meter {
+						position: absolute;
+						top: -14px;
+						left: 5px;
+						width: 200px;
+						text-align: left;
+					}
+
+					&.password-strength-meter-0 {
+						background-color: #FFF;
+						width: 0;
+					}
+
+					&.password-strength-meter-1 {
+						background-color: #CFCFCF;
+						width: 25%;
+					}
+
+					&.password-strength-meter-2 {
+						background-color: #FFF0B4;
+						width: 50%;
+					}
+
+					&.password-strength-meter-3 {
+						background-color: #a7db8d;
+						width: 75%;
+					}
+
+					&.password-strength-meter-4 {
+						background-color: #87c568;
+						width: 100%;
+					}
+				}
+			}
+		}
+
+		// Informacoes Pessoais
+		.info {
+
+			// Nome / Sobrenome
+			.customer-name-fields {
+				> div {
+					width: 100%;
+					margin-bottom: 20px;
+				}
+			}
+		}
+
+		// Btns de Acoes
+		.actions-toolbar {
+
+			&.single {
+				margin-top: 35px;
+				text-align: center;
+
+				@media @altura-max-599 {
+					position: relative;
+					bottom: 0;
+					padding: 30px 0 10px;
+				}
+
+				@media @celular-620 {
+					bottom: 15px;
+				}
+			}
+
+			.action.primary {
+				.btn-primario();
+			}
+
+			.action.back {
+				.btn-neutro();
+				@media @celular-420 {
+					font-size: 13px;
+				}
+			}
+
+			.item {
+				float: left;
+
+				a {
+					display: block;
+					cursor: pointer;
+					.btn-primario();
+
+					&[navegacao="0"] {
+						.btn-secundario;
+					}
+				}
+
+				&:last-child {
+					float: right;
+				}
+			}
+		}
+	}
+}
+

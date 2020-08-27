@@ -1,0 +1,296 @@
+<?php $themeHelper = $this->helper('MGS\Mpanel\Helper\Data'); ?> <?php if($themeHelper->getStoreConfig('mgstheme/general/sticky_menu')): ?> <script type="text/javascript">
+		require([
+			'jquery'
+		], function(jQuery){
+			(function($) {
+				var height_header = $('.header').height() + $('.megamenu-content').height();
+				var check_height = $(window).height();
+				var body_height = $('body').height() - 250 -  height_header;
+				if(body_height > check_height){
+					$(window).scroll(function(){
+						if($(this).scrollTop() > 200 & $(this).width() > 991){
+							$('#placeholder-header').height(height_header);
+							$('#placeholder-header').show();
+							$('.header').addClass('active-sticky');
+						}else {
+							$('.header').removeClass('active-sticky');
+							$('#placeholder-header').hide();
+						}
+					});
+					$(window).resize(function() {
+						if($(this).width() < 992){
+							$('.header').removeClass('active-sticky');
+							$('#placeholder-header').hide();
+						}
+					});
+				}
+			})(jQuery);
+		});</script><?php endif ?> <?php if($themeHelper->getStoreConfig('mgstheme/general/back_to_top')): ?> <a href="" class="scroll-to-top"><i class="fa fa-arrow-up"></i></a> <script type="text/javascript">
+		require([
+			'jquery'
+		], function(jQuery){
+			(function($) {
+				$(window).scroll(function(){
+					if ($(this).scrollTop() > 1) {
+						$('.scroll-to-top').css({bottom:"25px"});
+					} else {
+						$('.scroll-to-top').css({bottom:"-100px"});
+					}
+				});
+
+				$('.scroll-to-top').click(function(){
+					$('html, body').animate({scrollTop: '0px'}, 800);
+					return false;
+				});
+			})(jQuery);
+		});</script><?php endif ?> <?php if (!$themeHelper->getStoreConfig('checkout/cart/redirect_to_cart')) : ?> <script type="text/x-magento-init">
+	{
+		"[data-role=tocart-form], .form.map.checkout": {
+			"catalogAddToCart": {}
+		}
+	}</script><?php endif; ?> <style>.panel-block-row.col-md-12.box-banner.animated.appear-animation.fadeInRight .owl-stage-outer {cursor: pointer;}</style><input type="hidden" id="regiao-uf2"><script>
+	window.onload = initPage;
+	function initPage(){
+		if(obj = document.querySelector('.panel-block-row.col-md-12.box-banner.animated.appear-animation.fadeInRight .owl-stage-outer')) {
+			obj.onclick = function () {
+				location.href="<?php echo $block->getBaseUrl().'pratos-prontos.html';?>";
+			}
+		}
+
+
+		if (document.querySelector('body.checkout-index-index')|| document.querySelector('body.checkout-cart-index')) {
+			setTimeout(loop, 5000);
+		}
+	}
+	function loop() {
+		celular = document.querySelector('[name*="shippingAddress.fax"] [name*="fax"]');
+		telefone = document.querySelector('[name*="shippingAddress.telephone"] [name*="telephone"]');
+
+
+		if(obj = document.querySelector('[name*="shippingAddress.postcode"] input'))
+			objFinal = obj;
+		else
+			objFinal = 0;
+
+
+		if (objFinal) {
+			objFinal.onchange = function () {
+				if(document.querySelector('body.checkout-index-index'))
+					pesquisacep(this.value);
+			};
+
+			objFinal.onkeyup = function () {
+				this.value = this.value.replace(/[^\d]+/g,'');
+			};
+
+			if(celular && telefone) {
+				celular.onkeyup = function () {
+					this.value = mascaraTel(this.value);
+				};
+				telefone.onkeyup = function () {
+					this.value = mascaraTel(this.value);
+				};
+			}
+		}else{
+			setTimeout(loop,5000);
+		}
+	}
+
+
+	function limpa_formulario_cep() {
+
+		var v1 = document.querySelector('[name*="street[0]"]');
+		var v2 = document.querySelector('[name*="street[3]"]');
+		var v3 = document.querySelector('[name*="shippingAddress.city"] [name*="city"]');
+		v1.value=("");
+		v2.value=("");
+		v3.value=("");
+
+	}
+
+	function meu_callback(conteudo) {
+		if (!("erro" in conteudo)) {
+
+			var v1 = document.querySelector('[name*="street[0]"]');
+			var v2 = document.querySelector('[name*="street[3]"]');
+			var v3 = document.querySelector('[name*="shippingAddress.city"] [name*="city"]');
+
+			v1.value=(conteudo.logradouro);
+			v2.value=(conteudo.bairro);
+			v3.value=(conteudo.localidade);
+			document.getElementById('regiao-uf2').value=(conteudo.uf);
+			buscarUf2(conteudo.uf);
+
+			jQuery('[name*="region_id"]').trigger('change');
+			jQuery(v1).trigger('keyup');
+			jQuery(v2).trigger('keyup');
+			jQuery(v3).trigger('keyup');
+
+		}
+		else {
+
+			limpa_formulario_cep();
+			alert("CEP não encontrado.");
+		}
+	}
+
+	function pesquisacep(valor) {
+
+		var cep = valor.replace(/\D/g, '');
+
+
+		if (cep != "") {
+
+
+			var validacep = /^[0-9]{8}$/;
+
+
+			if(validacep.test(cep)) {
+
+
+				var v1 = document.querySelector('[name*="street[0]"]');
+				var v2 = document.querySelector('[name*="street[3]"]');
+				var v3 = document.querySelector('[name*="shippingAddress.city"] [name*="city"]');
+				v1.value="...";
+				v2.value="...";
+				v3.value="...";
+
+
+				var script = document.createElement('script');
+
+
+				script.src = '//viacep.com.br/ws/'+ cep + '/json/?callback=meu_callback';
+
+
+				document.body.appendChild(script);
+
+			}
+			else {
+				limpa_formulario_cep();
+				alert("Formato de CEP inválido.");
+			}
+		}
+		else {
+			limpa_formulario_cep();
+		}
+	}
+	function buscarUf2(uf){
+		switch(uf) {
+			case "AC":
+				document.querySelector('[name="region_id"]').value = "485";
+				break;
+			case "AL":
+				document.querySelector('[name="region_id"]').value = "486";
+				break;
+			case "AP":
+				document.querySelector('[name="region_id"]').value = "487";
+				break;
+			case "AM":
+				document.querySelector('[name="region_id"]').value = "488";
+				break;
+			case "BA":
+				document.querySelector('[name="region_id"]').value = "489";
+				break;
+			case "CE":
+				document.querySelector('[name="region_id"]').value = "490";
+				break;
+			case "ES":
+				document.querySelector('[name="region_id"]').value = "491";
+				break;
+			case "GO":
+				document.querySelector('[name="region_id"]').value = "492";
+				break;
+			case "MA":
+				document.querySelector('[name="region_id"]').value = "493";
+				break;
+			case "MT":
+				document.querySelector('[name="region_id"]').value = "494";
+				break;
+			case "MS":
+				document.querySelector('[name="region_id"]').value = "495";
+				break;
+			case "MG":
+				document.querySelector('[name="region_id"]').value = "496";
+				break;
+			case "PA":
+				document.querySelector('[name="region_id"]').value = "497";
+				break;
+			case "PB":
+				document.querySelector('[name="region_id"]').value = "498";
+				break;
+			case "PR":
+				document.querySelector('[name="region_id"]').value = "499";
+				break;
+			case "PE":
+				document.querySelector('[name="region_id"]').value = "500";
+				break;
+			case "PI":
+				document.querySelector('[name="region_id"]').value = "501";
+				break;
+			case "RJ":
+				document.querySelector('[name="region_id"]').value = "502";
+				break;
+			case "RN":
+				document.querySelector('[name="region_id"]').value = "503";
+				break;
+			case "RS":
+				document.querySelector('[name="region_id"]').value = "504";
+				break;
+			case "RO":
+				document.querySelector('[name="region_id"]').value = "505";
+				break;
+			case "RR":
+				document.querySelector('[name="region_id"]').value = "506";
+				break;
+			case "SC":
+				document.querySelector('[name="region_id"]').value = "507";
+				break;
+			case "SP":
+				document.querySelector('[name="region_id"]').value = "508";
+				break;
+			case "SE":
+				document.querySelector('[name="region_id"]').value = "509";
+				break;
+			case "TO":
+				document.querySelector('[name="region_id"]').value = "510";
+				break;
+			case "DF":
+				document.querySelector('[name="region_id"]').value = "511";
+				break;
+		}
+
+	}
+	function mascaraTel(v){
+		v=v.replace(/\D/g,"");
+		v=v.replace(/^(\d{2})(\d)/g,"($1) $2");
+		v=v.replace(/(\d)(\d{4})$/,"$1-$2");
+		return v;
+	}</script><div class="iw3-messages-conteudo" style="display: none;"><div class="iw3-messages"><div class="iw3-message-container"><?php echo __('Você adicionou'). '<div id="nome-produto-modal"></div>'.__('ao carrinho de compras.');?></div><div class="iw3-messages-action continuar"><a href="javascript:fechaModalMsg()">continuar comprando</a></div><div class="iw3-messages-action carrinho"><a href="<?php echo $block->getBaseUrl().'checkout';?>">ir para o carrinho</a></div><div id="mycounter"></div></div></div><script>
+	function chamaModalMsg(v){
+		jQuery(".iw3-messages-conteudo").fadeIn();
+		document.getElementById('nome-produto-modal').innerHTML = v;
+		onTimer(5);
+	}
+
+	function fechaModalMsg(){
+		jQuery(".iw3-messages-conteudo").fadeOut();
+	}
+
+	i = 0;
+	function onTimer(v) {
+		if(v)
+			i = v;
+
+		document.getElementById('mycounter').innerHTML = i;
+		i--;
+		if (i < 0) {
+			fechaModalMsg();
+		}
+		else {
+			setTimeout(onTimer, 1000);
+		}
+	}</script><!--Start of Zendesk Chat Script--><script type="text/javascript">
+window.$zopim||(function(d,s){var z=$zopim=function(c){z..push(c)},$=z.s=
+d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set. .push(o)};z.=[];z.set.=[];$.async=!0;$.setAttribute("charset","utf-8");
+$.src="https://v2.zopim.com/?5JSwJYpM8NNposl8B9XQfUW0x6DJ0n6o";z.t=+new Date;$.
+type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");</script>

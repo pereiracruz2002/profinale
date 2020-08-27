@@ -1,0 +1,235 @@
+// Titulos
+.box-title-featured {
+	background: #FFF;
+	// margin: -87px 0 0;
+	position: relative;
+	z-index: 1;
+	padding: 64px 0 0;
+	width: 100%;
+
+	@media @tablet-767 {
+		padding: 64px 15px 0;
+	}
+
+	.content-heading {
+		margin: 0;
+
+		&:before {
+			display: none;
+		}
+	}
+
+	h2 {
+		.fonte1();
+		font-size: 45px;
+		text-align: center;
+		margin: 0 0 15px;
+	}
+}
+
+.section-boxed-categories {
+
+	> .container {
+		> .row {
+			> div {
+				> .row {
+					@media @tablet-991 {
+						display: flex;
+						flex-wrap: wrap;
+						justify-content: space-between;
+						align-items: stretch;
+					}
+				}
+			}
+		}
+	}
+
+	.banner-category {
+		padding: 10px 5px;
+
+		@media @tablet-991 {
+			width: 50%;
+
+			img {
+				width: 100%;
+			}
+		}
+
+		@media @celular-380 {
+			width: 100%;
+			clear: both;
+		}
+
+		.text {
+			top: 0;
+			width: 100%;
+
+			.banner-text {
+				color: #FFF;
+				text-align: center;
+
+				.box-title {
+					margin: 0 0 12px;
+					.fonte3();
+					font-size: 38px;
+					cursor: default;
+
+					@media @desktop-1199-992,
+					@celular-540 {
+						font-size: 28px;
+					}
+
+					@media @celular-380 {
+						font-size: 38px;
+					}
+				}
+				.box-text {
+					.fonte4();
+					font-size: 12px;
+					margin: 0;
+					cursor: default;
+					text-shadow: 1px 1px 1px #000;
+
+					@media @tablet-991 {
+						font-size: 15px;
+					}
+
+					@media @celular-540 {
+						font-size: 12px;
+					}
+
+					@media @celular-380 {
+						font-size: 15px;
+					}
+
+					.quebra {
+						/* display: block; */
+					}
+				}
+			}
+			.banner-button {
+				position: absolute;
+				left: 15px;
+				right: 15px;
+				bottom: 15px;
+
+				.btn-promo-banner {
+					.btn-primario();
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+// Setas dos Sliders
+.padrao-next-prev() {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: transparent;
+	color: #6d6e72;
+	.transicao();
+
+	&:hover {
+		background-color: transparent;
+	}
+}
+
+.setas-produtos() {
+	.owl-nav {
+		@media @tablet-767 {		
+			width: 100%;
+			position: absolute;
+			top: 0;
+		}
+		> div {
+			position: absolute;
+			top: 50%;
+			margin-top: -20px;
+			border: 0 !important;
+			display: block !important;
+			margin: 0;
+			width: 40px;
+			height: 40px;
+			line-height: 40px;
+			font-size: 45px;
+			cursor: pointer;
+			.transicao;
+			opacity: 1;
+			background: transparent !important;
+
+			@media @tablet-767 {		
+				position: initial !important;
+				margin: 0 !important;
+				text-align: center !important;
+				display: inline-block !important;
+			}
+
+			&.disabled {
+				cursor: default;
+				opacity: 0.4;
+			}
+
+			.fa {
+				width: 100%;
+				height: 100%;
+			}
+
+			
+			&.owl-prev {
+				left: -15px !important;
+				right: initial;
+				text-align: left;
+
+				@media @tablet-767 {		
+					left: 15px !important;
+				}
+
+				.fa-arrow-left {
+					&:before {
+						content: "\f104";
+						.padrao-next-prev();
+					}
+				}
+			}
+
+			&.owl-next {
+				right: -15px !important;
+				left: initial;
+				text-align: right;
+
+				@media @tablet-767 {		
+					left: 30px !important;
+					right: initial !important;
+				}
+
+				.fa-arrow-right {
+					&:before {
+						content: "\f105";
+						left: initial;
+						.padrao-next-prev();
+					}
+				}
+			}
+		}
+	}
+}
+
+.box-products {
+	.owl-item {
+		padding: 0 !important;
+	}
+	.products-grid {
+		.product-item {
+			.product-item-details {
+				.product-item-inner {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.setas-produtos;
+}

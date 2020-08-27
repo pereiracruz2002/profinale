@@ -1,0 +1,211 @@
+&.wishlist-index-index {
+	.page-wrapper {
+		#maincontent {
+			> .row {
+				> .column {
+					.boxed-content.padding20 {
+						padding: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+#wishlist-view-form {
+
+	.products-grid.wishlist {
+
+		.table-responsive {
+			overflow-x: scroll;
+			.table {
+				width: 992px;
+
+				thead {
+					tr {
+						th {
+							.padrao-th();
+						}
+					}
+				}
+
+				tbody {
+					tr {
+						td {
+							position: relative;
+							.padrao-td();
+
+							// Imagem
+							.image-product {
+								img {
+								    width: 80px;
+								    height: auto;
+								}
+							}
+
+							// Nome
+							.product-item-name {
+								vertical-align: middle;
+							    padding-top: 0;
+								padding-bottom: 0;
+							    margin: 0;
+
+								a {
+									.fonte3();
+									text-transform: uppercase;
+									color: @cor-neutra-1;
+									font-size: 19px;
+									text-decoration: none;
+								}
+							}
+
+							// Preco
+							.price-box {
+								.price-as-configured {
+									margin: 0;
+								}
+								.price {
+									.preco-geral();
+									font-size: 18px;
+								}
+							}
+
+							.product-item-inner {
+								// Comentario
+								.comment-box {
+									textarea {
+										.estilos-campos();
+									    min-height: 0;
+									    height: 50px;
+									}
+								}
+
+								.box-tocart {
+		   							position: inherit;
+									margin: 6px 0 0;
+									padding: 0;
+
+									// Qtd
+									.qty {
+									    float: left;
+									    margin-top: 3px;
+									    margin-bottom: 0;
+
+										input {
+											.estilos-campos();
+											width: 45px !important;
+											float: right;
+										}
+									}
+
+									// Btn Comprar
+									.product-item-actions {
+										position: absolute;
+									    top: 15px;
+									    right: 15px;
+		    							width: 37px;
+
+										.action.tocart {
+											.btn-primario();
+											min-width: auto;
+
+											.text {
+												font-size: 0;
+											}
+										}
+									}
+								}
+
+								> .product-item-actions {
+
+								    position: absolute;
+								    top: inherit;
+								    bottom: 15px;
+								    right: 30px;
+								    width: 37px;
+								    float: left;
+								    text-align: center;
+
+									// Editar
+									.action.edit {
+										display: none;
+									}
+
+									.btn-remove {
+									    display: block;
+									    width: 100%;
+									    min-width: 0;
+									    padding: 9px 0;
+									}
+								}
+							}
+						}
+					}
+				}
+		
+			}
+		}
+	}
+
+	// Btns de Apoio
+	.actions-toolbar {
+		.primary {
+			@media @tablet-767 {
+				width: 100% !important;
+			}
+
+			.action {
+				margin-right: 15px;
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+
+			// Adc Tudo ao Carrinho
+			.action.tocart {
+				.btn-primario();
+				width: auto;
+				float: right;
+
+				@media @tablet-991 {
+					width: 100%;
+				}
+			}
+
+			// Compartilhar Lista
+			.action.share {
+				.btn-secundario();
+				width: auto;
+
+				@media @tablet-991 {
+					width: 50%;
+					float: left;
+					margin-right: 0;
+					margin-bottom: 15px;
+				}
+
+				@media @celular-420 {
+					width: 100%;
+				}
+			}
+
+			// Atualizar Itens
+			.action.update {
+				.btn-secundario();
+				width: auto;
+
+				@media @tablet-991 {
+					width: 50%;
+					float: left;
+					margin-right: 0;
+					margin-bottom: 15px;
+				}
+
+				@media @celular-420 {
+					width: 100%;
+				}
+			}
+		}
+	}
+}

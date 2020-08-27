@@ -1,0 +1,124 @@
+.products-list {
+	.item {
+		border-bottom: 1px solid @cor-neutra-2;
+		margin: 0 0 30px;
+
+		.product-image-content {
+			// Imagem
+
+			// Btn QuickView
+			.mgs-quickview {
+				.btn-neutro();
+			}
+		}
+
+		.product.details {
+			// Preco
+			.price-box {
+				float: left;
+				width: 100%;
+				clear: both;
+				position: relative;
+
+				&:after {
+					content: 'à vista ou em 12x com juros a assumir';
+					display: block;
+					font-size: 12px;
+					.fonte4();
+					color: #666;
+				}
+
+				// Desconto
+				.special-price {
+					display: inline-block;
+					padding-top: 15px;
+				}
+
+				// Promocional
+				.old-price {
+					position: absolute;
+					top: 0;
+					left: 0;
+					color: #bebebe;
+					font-size: 12px;
+					margin-right: 5px;
+
+					&:before {
+						content: '';
+						width: 100%;
+						height: 1px;
+						background-color: #bebebe;
+						position: absolute;
+						top: 8px;
+						left: 0;
+					}
+
+					.price-label {
+						display: inline-block;
+						margin-right: 2px;
+					}
+
+					@media @tablet-991-768 {
+						height: 15px !important;
+						line-height: 20px !important;
+					}
+				}
+			}
+		}
+
+		.product-item-inner {
+			clear: both;
+
+			// Botoes
+			.product-item-actions {
+				float: left;
+				clear: both;
+				width: 100%;
+				margin: 15px 0;
+
+				// Comprar
+				.actions-primary {
+					width: 150px;
+
+					.tocart,
+					.tocart-iw3 {
+						width: 100% !important;
+						min-width: 150px;
+						margin: 10px 0 0;
+					}
+				}
+
+				// Favoritos
+				.actions-secondary {
+					margin-top: 16px;
+
+					// Caixa de Apoio
+					.action {
+						.btn-neutro();
+					}
+
+					// Comparar
+					.tocompare {
+						display: none;
+					}
+				}
+			}
+		}
+
+		.product.description {
+			.clear-elements();
+			display: none !important;
+
+			// Btn Saiba Mais
+			.action.more {
+				.btn-secundario();
+				display: block;
+				text-decoration: none;
+				height: auto;
+				padding: 10px;
+				float: right;
+				clear: both;
+			}
+		}
+	}
+}
